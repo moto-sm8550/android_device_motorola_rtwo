@@ -37,6 +37,7 @@ $(call inherit-product, device/motorola/sm8550-common/sm8550.mk)
 PRODUCT_PACKAGES += \
     FrameworksResRtwo \
     LineageSystemUIRtwo \
+    ProductFrameworksResRtwo \
     SettingsProviderResRtwo \
     SystemUIResRtwo
 
