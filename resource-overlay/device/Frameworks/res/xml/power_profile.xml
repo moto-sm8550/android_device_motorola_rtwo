@@ -5,8 +5,8 @@
 -->
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">56.64</item>
-    <item name="screen.full">242.36</item>
+    <item name="screen.on.display0">56.64</item>
+    <item name="screen.full.display0">242.36</item>
     <item name="wifi.on">0.21</item>
     <item name="wifi.active">79.86</item>
     <item name="wifi.scan">166.35</item>
