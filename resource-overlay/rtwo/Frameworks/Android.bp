@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "FrameworksResRtwo",
-    sdk_version: "current",
     vendor: true
 }
