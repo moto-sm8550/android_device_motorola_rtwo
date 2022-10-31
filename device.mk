@@ -38,6 +38,7 @@ $(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
+    ApertureResRtwo \
     FrameworksResRtwo \
     LineageSystemUIRtwo \
     ProductFrameworksResRtwo \
