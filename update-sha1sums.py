@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# Copyright (C) 2017-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,13 +23,12 @@ from hashlib import sha1
 device='rtwo'
 vendor='motorola'
 
-with open('proprietary-files.txt', 'r') as f:
-    lines = f.read().splitlines()
-vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
-needSHA1 = False
+files = [
+    "proprietary-files.txt",
+    "proprietary-files-carriersettings.txt"
+]
 
-
-def cleanup():
+def cleanup(lines):
     for index, line in enumerate(lines):
         # Skip empty or commented lines
         if len(line) == 0 or line[0] == '#' or '|' not in line:
@@ -37,9 +36,10 @@ def cleanup():
 
         # Drop SHA1 hash, if existing
         lines[index] = line.split('|')[0]
+    return lines
 
 
-def update():
+def update(lines):
     for index, line in enumerate(lines):
         # Skip empty lines
         if len(line) == 0:
@@ -62,12 +62,19 @@ def update():
                 hash = sha1(f.read()).hexdigest()
 
             lines[index] = '%s|%s' % (line, hash)
+    return lines
 
 
-if len(sys.argv) == 2 and sys.argv[1] == '-c':
-    cleanup()
-else:
-    update()
+for i in files:
+    with open(i, 'r') as f:
+        lines = f.read().splitlines()
+    vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
+    needSHA1 = False
 
-with open('proprietary-files.txt', 'w') as file:
-    file.write('\n'.join(lines) + '\n')
+    if len(sys.argv) == 2 and sys.argv[1] == '-c':
+        lines = cleanup(lines)
+    else:
+        lines = update(lines)
+
+    with open(i, 'w') as file:
+        file.write('\n'.join(lines) + '\n')
