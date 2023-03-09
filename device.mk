@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     libchrome.vendor \
-    SecureElement \
     Tag
 
 # Permissions

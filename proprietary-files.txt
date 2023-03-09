@@ -609,9 +609,7 @@ product/etc/permissions/com.motorola.motodisplay.xml
 product/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml
 
 # NFC
-system_ext/app/NfcNciNxp/NfcNciNxp.apk;OVERRIDES=NfcNci
 vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-vendor/bin/nqnfcinfo
 vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/lib64/nfc_nci.nqx.default.hw.so
 vendor/lib64/se_nq_extn_client.so
