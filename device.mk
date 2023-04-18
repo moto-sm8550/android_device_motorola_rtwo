@@ -34,7 +34,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Inherit from motorola sm8550-common
-$(call inherit-product, device/motorola/sm8550-common/sm8550.mk)
+$(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
