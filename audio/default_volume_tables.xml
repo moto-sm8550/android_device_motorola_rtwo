@@ -35,9 +35,9 @@
     <reference name="DEFAULT_SYSTEM_VOLUME_CURVE">
     <!-- Default System reference Volume Curve -->
         <point>1,-3800</point>
-        <point>33,-3300</point>
-        <point>66,-2800</point>
-        <point>100,-1300</point>
+        <point>33,-2900</point>
+        <point>66,-1800</point>
+        <point>100,-1000</point>
     </reference>
     <reference name="DEFAULT_MEDIA_VOLUME_CURVE">
     <!-- Default Media reference Volume Curve -->
