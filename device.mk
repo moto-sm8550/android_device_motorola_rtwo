@@ -1,17 +1,7 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 # Boot animation
@@ -26,19 +16,19 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-BOARD_SHIPPING_API_LEVEL := 31
-BOARD_API_LEVEL := 31
-PRODUCT_SHIPPING_API_LEVEL := 31
+BOARD_SHIPPING_API_LEVEL := 33
+BOARD_API_LEVEL := 33
+PRODUCT_SHIPPING_API_LEVEL := 33
 
-# Inherit from motorola sm8475-common
-$(call inherit-product, device/motorola/sm8475-common/sm8475.mk)
+# Inherit from motorola sm8550-common
+$(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    FrameworksResEqs \
-    LineageSystemUIEqs \
-    SettingsProviderResEqs \
-    SystemUIResEqs
+    FrameworksResRtwo \
+    LineageSystemUIRtwo \
+    SettingsProviderResRtwo \
+    SystemUIResRtwo
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -58,7 +48,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.eqs
+    android.hardware.biometrics.fingerprint@2.3-service.rtwo
 
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
@@ -90,11 +80,11 @@ PRODUCT_COPY_FILES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.eqs
+    vendor.lineage.powershare@1.0-service.rtwo
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.eqs
+    sensors.rtwo
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -102,10 +92,10 @@ PRODUCT_COPY_FILES += \
 # Touch
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.eqs
+    vendor.lineage.touch@1.0-service.rtwo
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/eqs/eqs-vendor.mk)
+$(call inherit-product, vendor/motorola/rtwo/rtwo-vendor.mk)

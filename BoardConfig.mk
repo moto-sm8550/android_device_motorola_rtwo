@@ -1,41 +1,31 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/eqs
+DEVICE_PATH := device/motorola/rtwo
 
-# Inherit from motorola sm8475-common
-include device/motorola/sm8475-common/BoardConfigCommon.mk
+# Inherit from motorola sm8550-common
+include device/motorola/sm8550-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := eqs
+TARGET_BOOTLOADER_BOARD_NAME := rtwo
 
 # Fingerprint
-#TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.eqs
+#TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.rtwo
 #SOONG_CONFIG_qtidisplay_udfps := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_eqs.xml
-DEVICE_MANIFEST_CAPE_FILES += $(DEVICE_PATH)/manifest_eqs.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_rtwo.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest_rtwo.xml
 ODM_MANIFEST_SKUS += dne
-ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_eqs_ese.xml
+ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_rtwo_ese.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
-	vendor/ext_config/moto-waipio-eqs.config \
-	vendor/ext_config/lineage-moto-waipio-eqs.config
+	vendor/ext_config/moto-kalama-rtwo.config \
+	vendor/ext_config/lineage-moto-kalama-rtwo.config
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
@@ -67,4 +57,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 VENDOR_SECURITY_PATCH := 2022-12-01
 
 # inherit from the proprietary version
-include vendor/motorola/eqs/BoardConfigVendor.mk
+include vendor/motorola/rtwo/BoardConfigVendor.mk

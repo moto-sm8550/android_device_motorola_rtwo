@@ -1,8 +1,8 @@
 cc_binary {
-    name: "vendor.lineage.powershare@1.0-service.eqs",
+    name: "vendor.lineage.powershare@1.0-service.rtwo",
     defaults: ["hidl_defaults"],
-    init_rc: ["vendor.lineage.powershare@1.0-service.eqs.rc"],
-    vintf_fragments: ["vendor.lineage.powershare@1.0-service.eqs.xml"],
+    init_rc: ["vendor.lineage.powershare@1.0-service.rtwo.rc"],
+    vintf_fragments: ["vendor.lineage.powershare@1.0-service.rtwo.xml"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [
