@@ -17,26 +17,23 @@ on fs
    insmod /vendor/lib/modules/sx937x_sar.ko
    insmod /vendor/lib/modules/qti_glink_charger.ko
    insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
+    insmod /vendor/lib/modules/wl2868c.ko
+    insmod /vendor/lib/modules/sensors_class.ko
+    insmod /vendor/lib/modules/sx937x_multi.ko
    #zram wb
    mount_all /vendor/etc/fstab.qcom.zram --early
 
 on early-boot
-    # factory i2c
-    chmod 0660 /dev/i2c-0
-    chmod 0660 /dev/i2c-1
-    chmod 0660 /dev/i2c-2
-    chmod 0660 /dev/i2c-3
-    chmod 0660 /dev/i2c-4
-    chown system system /dev/i2c-0
-    chown system system /dev/i2c-1
-    chown system system /dev/i2c-2
-    chown system system /dev/i2c-3
-    chown system system /dev/i2c-4
-    # for ufs HID
-    chown system system /sys/devices/platform/soc/1d84000.ufshc/ufshid/trigger
-
+    chown system system /dev/goodix_fp
+    chmod 0664 /dev/goodix_fp
+    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+# Add for after-sales ois gyro cal
+    mkdir /mnt/vendor/persist/camera/gyro_compat 0770 vendor_tcmd camera
 # Create directory for wireless charge test in factory
     mkdir /data/vendor/wlc 0775 vendor_tcmd system
+    chown system system /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
+    chmod 0664 /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
 
 # Change force_charging_enable access mode and permission for tcmd
     chmod 0664 /sys/class/power_supply/battery/device/force_charging_enable
@@ -94,6 +91,8 @@ on boot
     chmod 0660 /sys/class/touchscreen/primary/sensitivity
     chown system system /sys/class/touchscreen/primary/gesture
     chmod 0660 /sys/class/touchscreen/primary/gesture
+    chown system system /sys/class/touchscreen/primary/sample
+    chmod 0660 /sys/class/touchscreen/primary/sample
    # Set adaptive charging perms for HAL
     chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
     chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
