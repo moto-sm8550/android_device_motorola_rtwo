@@ -13,13 +13,11 @@ vendor/etc/eva/facedetection/model3.dat
 vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
+vendor/lib/camera/com.qti.ois.mot_bu63169.so
 vendor/lib/camera/fdconfigpreview.bin
 vendor/lib/camera/fdconfigpreviewlite.bin
 vendor/lib/camera/fdconfigvideo.bin
 vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/hw/camera.qcom.so
-vendor/lib/hw/com.qti.chi.override.so
-vendor/lib/camera/com.qti.ois.mot_bu63169.so
 vendor/lib/com.qti.chiusecaseselector.so
 vendor/lib/com.qti.qseeaon.so
 vendor/lib/com.qti.qseeutils.so
@@ -30,6 +28,11 @@ vendor/lib/com.qualcomm.mcx.linearmapper.so
 vendor/lib/com.qualcomm.mcx.policy.mfl.so
 vendor/lib/com.qualcomm.mcx.policy.xr.so
 vendor/lib/com.qualcomm.qti.mcx.usecase.extension.so
+vendor/lib/hw/camera.qcom.so
+vendor/lib/hw/com.qti.chi.override.so
+vendor/lib/libFace3DTA.so
+vendor/lib/libFace3D_hlos.so
+vendor/lib/libQ6MSFR_manager_stub.so
 vendor/lib/liba2d_helper.so
 vendor/lib/libaidenoiser.so
 vendor/lib/libaidenoiserv2.so
@@ -42,8 +45,6 @@ vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libeva.so
 vendor/lib/libeva_util.so
-vendor/lib/libFace3DTA.so
-vendor/lib/libFace3D_hlos.so
 vendor/lib/libface3d_dev.so
 vendor/lib/libfcell.so
 vendor/lib/libhdr10plus.so
@@ -70,7 +71,6 @@ vendor/lib/libopencv3a.so
 vendor/lib/libopestriping.so
 vendor/lib/libos.so
 vendor/lib/libpowercore.so
-vendor/lib/libQ6MSFR_manager_stub.so
 vendor/lib/libqll.so
 vendor/lib/libqll10.so
 vendor/lib/libqllengine.so
@@ -94,14 +94,12 @@ vendor/lib/libvidhance_stabilizer.so
 vendor/lib/libvidhance_zoom_stabilization.so
 vendor/lib/vendor.qti.hardware.camera.aon@1.0-service-impl.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/camera/com.qti.ois.mot_bu63169.so
 vendor/lib64/camera/arcsoft_dc_calibration_u.bin
+vendor/lib64/camera/com.qti.ois.mot_bu63169.so
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
@@ -115,6 +113,11 @@ vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/frontier_arcsoft_portrait_super_night_se_raw.bin
 vendor/lib64/frontier_arcsoft_super_night_raw.bin
 vendor/lib64/frontier_arcsoft_super_night_se_raw.bin
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libFace3DTA.so
+vendor/lib64/libFace3D_hlos.so
+vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/liba2d_helper.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
@@ -138,8 +141,6 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
-vendor/lib64/libFace3DTA.so
-vendor/lib64/libFace3D_hlos.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libfcell.so
 vendor/lib64/libhdr10plus.so
@@ -167,7 +168,6 @@ vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
 vendor/lib64/libpowercore.so
-vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
@@ -564,26 +564,26 @@ system/framework/moto-core_services.jar
 system/framework/moto-settings.jar
 system_ext/bin/motsettings
 system_ext/etc/permissions/com.motorola.androidx.camera.extensions.xml
-system_ext/framework/com.motorola.androidx.camera.extensions.jar
 system_ext/etc/public.libraries-motocamera.txt
+system_ext/framework/com.motorola.androidx.camera.extensions.jar
 system_ext/lib/libmcf_native_window_helper.motocamera.so
 system_ext/lib64/libmcf_native_window_helper.motocamera.so
 -system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
 
 # Moto Permissions
-product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml
 product/etc/permissions/com.motorola.camera3.eqs.xml:vendor/etc/permissions/com.motorola.camera3.eqs.xml
 product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com.motorola.camera3.lens.xml
+product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.moto-uirefresh.xml
 product/etc/permissions/com.motorola.motodisplay.xml
 product/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml
 system_ext/etc/permissions/com.motorola.androidx.camera.extensions.xml:vendor/etc/permissions/com.motorola.androidx.camera.extensions.xml
 
 # NFC
+vendor/bin/STFlashTool
 vendor/bin/hw/android.hardware.nfc@1.2-service.st
 vendor/bin/hw/android.hardware.secure_element@1.2-service-gto
-vendor/bin/STFlashTool
 vendor/etc/init/android.hardware.nfc@1.2-service.st.rc
 vendor/etc/init/android.hardware.secure_element@1.2-service-gto.rc
 vendor/lib64/android.hardware.secure_element@1.0-impl-gto.so
