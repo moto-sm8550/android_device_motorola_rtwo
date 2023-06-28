@@ -1,88 +1,38 @@
-import /vendor/etc/init/hw/init.vendor.st21nfc.rc
 
-on early-init
-   write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor walt
-   write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor walt
-   write /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor walt
-
+# This is for Moto rtwo device init rc file
 on fs
-   insmod /vendor/lib/modules/rbs_fod_mmi.ko
-   insmod /vendor/lib/modules/msm_drm.ko
-   insmod /vendor/lib/modules/mmi_annotate.ko
-   insmod /vendor/lib/modules/mmi_info.ko
-   insmod /vendor/lib/modules/mmi_relay.ko
-   insmod /vendor/lib/modules/sensors_class.ko
-   insmod /vendor/lib/modules/touchscreen_mmi.ko
-   insmod /vendor/lib/modules/goodix_brl_mmi.ko
-   insmod /vendor/lib/modules/sx937x_sar.ko
-   insmod /vendor/lib/modules/qti_glink_charger.ko
-   insmod /vendor/lib/modules/qpnp_adaptive_charge.ko
-   #zram wb
-   mount_all /vendor/etc/fstab.qcom.zram --early
-
-on early-boot
-    # factory i2c
-    chmod 0660 /dev/i2c-0
-    chmod 0660 /dev/i2c-1
-    chmod 0660 /dev/i2c-2
-    chmod 0660 /dev/i2c-3
-    chmod 0660 /dev/i2c-4
-    chown system system /dev/i2c-0
-    chown system system /dev/i2c-1
-    chown system system /dev/i2c-2
-    chown system system /dev/i2c-3
-    chown system system /dev/i2c-4
-    # for ufs HID
-    chown system system /sys/devices/platform/soc/1d84000.ufshc/ufshid/trigger
-
-# Create directory for wireless charge test in factory
-    mkdir /data/vendor/wlc 0775 vendor_tcmd system
-
-# Change force_charging_enable access mode and permission for tcmd
-    chmod 0664 /sys/class/power_supply/battery/device/force_charging_enable
-    chown vendor_tcmd system /sys/class/power_supply/battery/device/force_charging_enable
+    insmod /vendor/lib/modules/wl2868c.ko
+    insmod /vendor/lib/modules/sensors_class.ko
+    insmod /vendor/lib/modules/sx937x_multi.ko
+    #zram wb
+    mount_all /vendor/etc/fstab.qcom.zram --early
 
 on post-fs
+    start vendor.copy_qc_cert
+
     # Sensors
-    chown system system /sys/devices/platform/soc/990000.i2c/i2c-0/0-005d/touchscreen/primary/double_tap_enabled
-    chown system system /sys/devices/platform/soc/990000.i2c/i2c-0/0-005d/touchscreen/primary/double_tap_pressed
-    chown system system /sys/devices/platform/soc/990000.i2c/i2c-0/0-005d/touchscreen/primary/udfps_enabled
-    chown system system /sys/devices/platform/soc/990000.i2c/i2c-0/0-005d/touchscreen/primary/udfps_pressed
-
-on post-fs-data
-    # Param updater data for various modules
-    mkdir /data/vendor/param 0775 system system
-    # prepare folders for Egis FoD fingerprint sensor
-    mkdir /data/vendor/egis 0770 system system
-    mkdir /mnt/vendor/persist/egis 0770 system system
-    mkdir /data/vendor/tzstorage/egis 0770 system system
-    mkdir /data/vendor/egis/cqa  0770 system system
-
-    # Add for fod fps calibration
-    chown system system /sys/class/backlight/panel0-backlight/brightness
-    chown system system /sys/class/drm/card0-DSI-1/panelName
-    chown system system /sys/class/drm/card0-DSI-1/panelId
-    chown system system /d/dri/0/debug/motUtil
-    chmod 0666 /d/dri/0/debug/motUtil;
-    chmod 0666 /sys/class/backlight/panel0-backlight/brightness
-    chmod 0666 /sys/class/drm/card0-DSI-1/panelName
-    chmod 0666 /sys/class/drm/card0-DSI-1/panelId
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_enabled
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_pressed
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/udfps_enabled
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/udfps_pressed
 
 on early-boot
-    # Add for egis fingerprint
-    chown system system /dev/esfp0
-    chmod 0664 /dev/esfp0
+    chown system system /dev/goodix_fp
+    chmod 0664 /dev/goodix_fp
+    mkdir /data/vendor/gf_data 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+# Add for after-sales ois gyro cal
+    mkdir /mnt/vendor/persist/camera/gyro_compat 0770 vendor_tcmd camera
+# Create directory for wireless charge test in factory
+    mkdir /data/vendor/wlc 0775 vendor_tcmd system
+    chown system system /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
+    chmod 0664 /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
 
 on boot
-    # allow TCMD to access cci for OIS test
+    # allow TCMD to access cci
     chmod 0660 /dev/cci_intf
     chown system camera /dev/cci_intf
 
-    start vendor.touchRec
-    # touch screen calibration file
-    mkdir /mnt/vendor/persist/touch
-    chown vendor_tcmd system /mnt/vendor/persist/touch
-    chmod 0775 /mnt/vendor/persist/touch
     # Touch game mode control
     chown system system /sys/class/touchscreen/primary/rotate
     chmod 0660 /sys/class/touchscreen/primary/rotate
@@ -94,21 +44,96 @@ on boot
     chmod 0660 /sys/class/touchscreen/primary/sensitivity
     chown system system /sys/class/touchscreen/primary/gesture
     chmod 0660 /sys/class/touchscreen/primary/gesture
-   # Set adaptive charging perms for HAL
-    chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
-    chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
+    chown system system /sys/class/touchscreen/primary/sample
+    chmod 0660 /sys/class/touchscreen/primary/sample
+
+    #change vibrator test node file access permission
+    chmod 0660 /sys/class/qcom-haptics/enable_play
+    chown vendor_tcmd system /sys/class/qcom-haptics/enable_play
+
+    #bluetooth sar
+    write /data/vendor/radio/bluetooth_sar disable
+    chmod 0644 /data/vendor/radio/bluetooth_sar
+    chown radio /data/vendor/radio/bluetooth_sar
+
+    # max readyfor apps
+    setprop ro.vendor.config.max_readyfor_apps 4
+
+service vendor.netconfig /vendor/bin/vendor_netconfig
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+
+on boot && property:ro.bootmode=mot-factory
+    start vendor.netconfig
+
+service vendor.start_dhrystone /vendor/bin/init.dhrystone.sh -d 300
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+
+service vendor.stop_dhrystone /vendor/bin/init.dhrystone.sh -s stop
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+
+on property:persist.vendor.dhrystone.status=0
+    start vendor.stop_dhrystone
+    start thermal-engine
+
+service vendor.mot_vsync_psd /vendor/bin/mot_vsync_psd
+    class late_start
+    user root
+
+service vendor.capsense_reset /vendor/bin/capsense_reset
+   class core
+   user system
+   group system input
+   disabled
+
+on property:persist.vendor.dhrystone.status=1
+    stop thermal-engine
+    start vendor.start_dhrystone
+
+service vendor.copy_qc_cert /vendor/bin/copy_qc_cert.sh
+    class main
+    user system
+    group root system
+    oneshot
+    disabled
+
+service vendor.mmi-cap-sh /vendor/bin/init.mmi.cap.sh
+    class core
+    user root
+    oneshot
+
+on property:sys.boot_completed=1
+    start vendor.capsense_reset
+    #change adsp pmic test command file access permission
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/tcmd
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_usb_suspend
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_en
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_curr_max
+    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_volt_max
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/tcmd
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_usb_suspend
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_en
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_curr_max
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_wls_volt_max
 
     chown system system /sys/class/power_supply/wireless/device/tx_mode
     chown system system /sys/class/power_supply/wireless/device/wls_input_current_limit
     chown vendor_tcmd system /sys/class/power_supply/wireless/device/tx_mode_vout
     chmod 0660 /sys/class/power_supply/wireless/device/tx_mode
     chmod 0660 /sys/class/power_supply/wireless/device/wls_input_current_limit
-
-    #change vibrator test node file access permission
-    chmod 0660 /sys/class/qcom-haptics/enable_play
-    chown vendor_tcmd system /sys/class/qcom-haptics/enable_play
-    write /sys/class/qcom-battery/wireless_fw_update_time_ms 5000
-    write /sys/class/qcom-battery/wireless_fw_update 1
 
     # Set wlc perms for HAL
     chown system system /sys/class/power_supply/wireless/device/wlc_light_ctl
@@ -119,43 +144,72 @@ on boot
     chmod 0660 /sys/class/power_supply/wireless/device/wlc_light_ctl
     chmod 0660 /sys/class/power_supply/wireless/device/wlc_fan_speed
 
-   # vibrator hal need to access this sysfs node for AF noise issue
-   chown cameraserver cameraserver /sys/devices/platform/soc/soc:mot,cam-actuator/onekey_actuator
-   chmod 0660 /sys/devices/platform/soc/soc:mot,cam-actuator/onekey_actuator
+    # Change force_charging_enable access mode and permission for tcmd
+    chmod 0664 /sys/class/power_supply/battery/device/force_charging_enable
+    chown vendor_tcmd system /sys/class/power_supply/battery/device/force_charging_enable
 
-service capsense_reset /system/vendor/bin/capsense_reset
-   class core
-   user system
-   group system input
-   disabled
+    # Set adaptive charging perms for HAL
+    chown system system /sys/module/qpnp_adaptive_charge/parameters/upper_limit
+    chown system system /sys/module/qpnp_adaptive_charge/parameters/lower_limit
+    #Try to update wireless firmware
+    write /sys/class/qcom-battery/wireless_fw_update_time_ms 10000
+    write /sys/class/qcom-battery/wireless_fw_update 1
 
-on property:sys.boot_completed=1
-    start capsense_reset
-    #change adsp pmic test command file access permission
-    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/tcmd
-    chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/tcmd
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl
-
-#change for Rogue because the node changed
-on property:vendor.wifi.tethering=false
-    write /sys/module/qca6490/parameters/sar_mhs disabled
-
-on property:vendor.wifi.tethering=true
-    write /sys/module/qca6490/parameters/sar_mhs enabled
-
+#Override fwpath string when wpa_supplicant server was killed
 on property:vendor.wifi.station=true
-    write /sys/module/qca6490/parameters/sar_sta enabled
+    write /sys/module/kiwi_v2/parameters/sar_sta enabled
 
 on property:vendor.wifi.station=false
-    write /sys/module/qca6490/parameters/sar_sta disabled
+    write /sys/module/kiwi_v2/parameters/sar_sta disabled
 
-on property:dev.bootcomplete=1
-    stop llkd-${ro.debuggable:-0}
+on property:vendor.wifi.tethering=false
+    write /sys/module/kiwi_v2/parameters/sar_mhs disabled
 
+on property:vendor.wifi.tethering=true
+    write /sys/module/kiwi_v2/parameters/sar_mhs enabled
+
+on property:ro.product.is_prc=true
+    setprop persist.vendor.audio.use_case.extend prc
+
+on property:ro.carrier=tmo
+    setprop persist.vendor.audio.use_case.extend tmo
+
+#enable ftrace when boot complete
+# MMI_STOPSHIP <debug abnormal QC sensor>: capture sensor ftrace
+on property:dev.bootcomplete=1 && property:ro.vendor.build.type=userdebug
+    write /sys/kernel/tracing/tracing_on 0
+    write /sys/kernel/tracing/buffer_size_kb 65534
+    write /sys/kernel/tracing/set_event ""
+    write /sys/kernel/tracing/trace   ""
+    write /sys/kernel/tracing/events/irq/enable 1
+    write /sys/kernel/tracing/events/sched/sched_switch/enable 1
+    write /sys/kernel/tracing/events/sched/sched_enq_deq_task/enable 1
+    write /sys/kernel/tracing/events/sched/sched_migrate_task/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup/enable 1
+    write /sys/kernel/tracing/events/sched/sched_wakeup_new/enable 1
+    write /sys/kernel/tracing/events/power/cpu_idle/enable 1
+    write /sys/kernel/tracing/events/power/suspend_resume/enable 1
+    write /sys/kernel/tracing/events/iommu/map/enable 1
+    write /sys/kernel/tracing/events/iommu/unmap/enable 1
+    write /sys/kernel/tracing/events/arm_smmu/map_pages/enable 1
+    write /sys/kernel/tracing/events/arm_smmu/map_sg/enable 1
+    write /sys/kernel/tracing/events/arm_smmu/unmap_pages/enable 1
+    write /sys/kernel/tracing/set_event "workqueue:workqueue_execute_end workqueue:workqueue_execute_start"
+    write /sys/kernel/tracing/set_event "workqueue:workqueue_activate_work workqueue:workqueue_queue_work"
+    write /sys/kernel/tracing/set_event "sched:sched_switch sched:sched_wakeup sched:sched_stat_blocked"
+    write /sys/kernel/tracing/set_event "sched:sched_process_wait sched:sched_load_balance"
+    write /sys/kernel/tracing/set_event "sched:* irq:*"
+    write /sys/kernel/tracing/tracing_on 1
+
+on property:vendor.bluetooth.sar_state=connect
+    write /data/vendor/radio/bluetooth_sar connect
+
+on property:vendor.bluetooth.sar_state=disconnect
+    write /data/vendor/radio/bluetooth_sar disconnect
+
+#update the high watermark by set efk value
 on property:vendor.post_boot.parsed=1
-    write /sys/devices/system/cpu/cpu4/core_ctl/enable 0
-    write /sys/devices/system/cpu/cpu7/core_ctl/enable 0
+    setprop sys.sysctl.extra_free_kbytes ${sys.sysctl.extra_free_kbytes}
 
 on property:vendor.usb.headset_reset=2
     write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode none

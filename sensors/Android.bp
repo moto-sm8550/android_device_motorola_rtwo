@@ -5,7 +5,7 @@
 //
 
 cc_library_shared {
-    name: "sensors.eqs",
+    name: "sensors.rtwo",
     defaults: ["hidl_defaults"],
     srcs: [
         "Sensor.cpp",
@@ -29,7 +29,7 @@ cc_library_shared {
         "android.hardware.sensors@2.X-multihal",
     ],
     cflags: [
-        "-DLOG_TAG=\"sensors.eqs\"",
+        "-DLOG_TAG=\"sensors.rtwo\"",
     ],
     vendor: true,
 }

@@ -14,49 +14,62 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/eqs
+DEVICE_PATH := device/motorola/rtwo
 
-# Inherit from motorola sm8475-common
-include device/motorola/sm8475-common/BoardConfigCommon.mk
+# Inherit from motorola sm8550-common
+include device/motorola/sm8550-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := eqs
+TARGET_BOOTLOADER_BOARD_NAME := rtwo
 
 # Fingerprint
-#TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.eqs
+#TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.rtwo
 #SOONG_CONFIG_qtidisplay_udfps := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_eqs.xml
-DEVICE_MANIFEST_CAPE_FILES += $(DEVICE_PATH)/manifest_eqs.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_rtwo.xml
+DEVICE_MANIFEST_CAPE_FILES += $(DEVICE_PATH)/manifest_rtwo.xml
 ODM_MANIFEST_SKUS += dne
-ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_eqs_ese.xml
+ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_rtwo_ese.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
-	vendor/ext_config/moto-waipio-eqs.config \
-	vendor/ext_config/lineage-moto-waipio-eqs.config
+	vendor/ext_config/moto-kalama-rtwo.config \
+	vendor/ext_config/lineage-moto-kalama-rtwo.config
+
+TARGET_KERNEL_DIR := $(DEVICE_PATH)-kernel
+
+KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)/modules
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_DIR)/kernel
+BOARD_PREBUILT_DTBOIMAGE := $(TARGET_KERNEL_DIR)/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
 
 # Kernel Modules
+KERNEL_MODULES := $(wildcard $(KERNEL_MODULE_DIR)/*.ko)
+
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.vendor_boot))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist.vendor_boot
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery))
-BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+# BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
+BOARD_SYSTEM_DLKM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load.vendor_boot))
+
+BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_DIR)/, $(notdir $(BOARD_VENDOR_KERNEL_MODULES_LOAD)))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_MODULE_DIR)/, $(notdir $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)))
 
 # Partitions
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 228362006528
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 230140391424
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 3318226944
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 873680896
 BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 916299776
 endif
-BOARD_MOT_DP_GROUP_SIZE := 11806965760 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
-BOARD_SUPER_PARTITION_SIZE := 11811160064
+BOARD_MOT_DP_GROUP_SIZE := 9940496384 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
+BOARD_SUPER_PARTITION_SIZE := 9940500480
 
 # Properties
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
@@ -67,4 +80,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 VENDOR_SECURITY_PATCH := 2023-04-01
 
 # inherit from the proprietary version
-include vendor/motorola/eqs/BoardConfigVendor.mk
+include vendor/motorola/rtwo/BoardConfigVendor.mk

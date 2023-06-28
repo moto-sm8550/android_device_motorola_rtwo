@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.powershare@1.0-service.eqs"
+#define LOG_TAG "vendor.lineage.powershare@1.0-service.rtwo"
 
 #include "PowerShare.h"
 

@@ -874,8 +874,8 @@
             <keys_and_values StreamType="PAL_STREAM_VOICE_CALL">
                 <!-- DEVICERX - HANDSET -->
                 <graph_kv key="0xA2000000" value="0xA2000004"/>
-                <!-- DEVICEPP_RX - DEVICEPP_RX_VOICE_Default -->
-                <graph_kv key="0xAC000000" value="0xAC000005"/>
+                <!-- DEVICEPP_RX - DEVICEPP_RX_VOICE_PRC -->
+                <graph_kv key="0xAC000000" value="0xAC100005"/>
             </keys_and_values>
             <keys_and_values StreamType="PAL_STREAM_VOICE_CALL" CustomConfig="HAC">
                 <!-- DEVICERX - HANDSET -->
@@ -1291,12 +1291,6 @@
                 <graph_kv key="0xA3000000" value="0xA3000003"/>
                 <!-- DEVICEPP_TX - DEVICEPP_TX_VOICE_FLUENCE_NN -->
                 <graph_kv key="0xAD000000" value="0xAD00000F"/>
-            </keys_and_values>
-            <keys_and_values StreamType="PAL_STREAM_VOICE_CALL" CustomConfig="TTY">
-                <!-- DEVICETX - HEADPHONE_MIC -->
-                <graph_kv key="0xA3000000" value="0xA3000003"/>
-                <!-- DEVICEPP_TX - DEVICEPP_TX_VOICE_FLUENCE_SMECNS -->
-                <graph_kv key="0xAD000000" value="0xAD000008"/>
             </keys_and_values>
             <keys_and_values StreamType="PAL_STREAM_VOIP_TX">
                 <!-- DEVICETX - HEADPHONE_MIC -->
