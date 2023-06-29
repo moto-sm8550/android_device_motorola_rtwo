@@ -91,6 +91,7 @@ vendor/lib/libipebpsstriping170.so
 vendor/lib/libipebpsstriping480.so
 vendor/lib/libisphwsetting.so
 vendor/lib/libjpege.so
+vendor/lib/libmctfengine_stub.so
 vendor/lib/libmfGhostDetection.so
 vendor/lib/libmfec.so
 vendor/lib/libmmcamera_bestats.so
@@ -113,6 +114,7 @@ vendor/lib/libpowercore.so
 vendor/lib/libqll.so
 vendor/lib/libqll10.so
 vendor/lib/libqllengine.so
+vendor/lib/libqsegnet.so
 vendor/lib/libqshcamera.so
 vendor/lib/libremosaic_wrapper.so
 vendor/lib/libsfeShiftExtrapolation.so
@@ -121,6 +123,7 @@ vendor/lib/libsynx.so
 vendor/lib/libtfestriping.so
 vendor/lib/libthreadutils.so
 vendor/lib/libubifocus.so
+vendor/lib/libvideoml.so
 vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
@@ -162,6 +165,7 @@ vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/liba2d_helper.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
+vendor/lib64/libanc_supervq.so
 vendor/lib64/libancbase_rt_fusion.so
 vendor/lib64/libarcsoft_chi_utils.so
 vendor/lib64/libarcsoft_hdr_detection.so
@@ -184,6 +188,7 @@ vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libcud_model_raw.so
+vendor/lib64/libdlrmsc.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
@@ -196,6 +201,7 @@ vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libipebpsstriping480.so
 vendor/lib64/libisphwsetting.so
 vendor/lib64/libjpege.so
+vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
 vendor/lib64/libmmcamera_bestats.so
@@ -210,6 +216,7 @@ vendor/lib64/libmot_engine_settings.so
 vendor/lib64/libmotcameramodulemonitor.so
 vendor/lib64/libmotoisdataqueue.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
@@ -220,8 +227,10 @@ vendor/lib64/libpowercore.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
+vendor/lib64/libqsegnet.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libremosaic_wrapper.so
+vendor/lib64/libremosaiclib.so
 vendor/lib64/librmsclib1.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsnpe_loader.so
@@ -232,6 +241,7 @@ vendor/lib64/libthreadutils.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libubifocus.so
+vendor/lib64/libvideoml.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
