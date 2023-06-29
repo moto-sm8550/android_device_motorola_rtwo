@@ -32,6 +32,14 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/lib/libar-acdb.so
 vendor/lib64/libar-acdb.so
 
+# Audio - aualgo config
+vendor/etc/aualgo/ainr_1.tflite
+vendor/etc/aualgo/ainr_2.tflite
+vendor/etc/aualgo/aualgo_azp.conf
+vendor/etc/aualgo/aualgo_sst.conf
+vendor/etc/aualgo/aualgo_sst.dat
+vendor/etc/aualgo_arp_conf.inix
+
 # Camera
 vendor/etc/eva/facedetection/model3.dat
 vendor/etc/pwr/PowerFeatureConfig.xml
@@ -53,7 +61,9 @@ vendor/lib/com.qualcomm.mcx.nonlinearmapper.so
 vendor/lib/com.qualcomm.mcx.policy.mfl.so
 vendor/lib/com.qualcomm.mcx.policy.xr.so
 vendor/lib/com.qualcomm.qti.mcx.usecase.extension.so
+vendor/lib/cud_model_raw.tflite
 vendor/lib/hw/camera.qcom.so
+vendor/lib/hw/com.qti.chi.offline.so
 vendor/lib/hw/com.qti.chi.override.so
 vendor/lib/libFace3DTA.so
 vendor/lib/libFace3D_hlos.so
@@ -69,6 +79,7 @@ vendor/lib/libchifeature2.so
 vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libcommonchiutils.so
+vendor/lib/libcud_model_raw.so
 vendor/lib/libeva.so
 vendor/lib/libeva_util.so
 vendor/lib/libface3d_dev.so
@@ -136,7 +147,9 @@ vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.mcx.policy.xr.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
+vendor/lib64/cud_model_raw.tflite
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libAncHumanSegFigureFusion.so
 vendor/lib64/libFace3DTA.so
@@ -170,6 +183,7 @@ vendor/lib64/libchifeature2.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
+vendor/lib64/libcud_model_raw.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
@@ -415,9 +429,12 @@ vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_ov60a_eeprom.so
 # Camera - etc
 vendor/etc/camera/aec_golden_tele.bin
 vendor/etc/camera/aec_golden_wide.bin
+vendor/etc/camera/anc.bin
+vendor/etc/camera/anc_ob_mask_1352_2400.bin
 vendor/etc/camera/dual_golden_tele.bin
 vendor/etc/camera/dual_golden_wide.bin
 vendor/etc/camera/mot_engine_config.bin
+vendor/etc/camera/svq_cache
 vendor/etc/camera/vidhance.lic
 vendor/etc/camera/vidhance_calibration
 vendor/etc/jiigan/jiigan_model.data
@@ -551,6 +568,9 @@ vendor/etc/display/qdcm_calib_data_mipi_mot_cmd_csot_1080p_dsc_667.json
 vendor/etc/display/qdcm_calib_data_mipi_mot_cmd_tianma_1080p_667.json
 vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 
+# Dolby vision
+vendor/etc/dolby_vision.cfg
+
 # Fingerprint
 vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_hal.so
@@ -594,6 +614,7 @@ vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 vendor/bin/nqnfcinfo
 vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
 # NFC - configs
@@ -608,11 +629,18 @@ vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 
 # NFC firmware
+vendor/lib/libpn560_fw.so
+vendor/lib/libsn100u_fw.so
+vendor/lib/libsn220u_fw.so
+vendor/lib64/libpn560_fw.so
+vendor/lib64/libsn100u_fw.so
+vendor/lib64/libsn220u_fw.so
 
 # OEM
 vendor/etc/vhw.xml
 
 # Sensors
+vendor/lib64/panel_als_comp_filter_rtwo.so
 vendor/lib64/sensors.moto.so
 vendor/lib64/sensors.ssc.so
 
@@ -697,3 +725,7 @@ vendor/firmware/goodix-csot01-gt9916P-3206151d-62cbe0fe-rtwo.bin
 vendor/firmware/goodix-tm-gt9916P-22121302-6398384b-rtwo.bin
 vendor/firmware/tm_goodix_cfg_group.bin
 vendor/firmware/tm_goodix_test_limits_255.csv
+
+# VPU firmware
+vendor/firmware/vpu30_4v.mbn
+vendor/firmware/vpu30_4v_unsigned.mbn
