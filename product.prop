@@ -1,0 +1,3 @@
+# Esim menu
+esim.enable_esim_system_ui_by_default=true
+masterclear.allow_retain_esim_profiles_after_fdr=true
