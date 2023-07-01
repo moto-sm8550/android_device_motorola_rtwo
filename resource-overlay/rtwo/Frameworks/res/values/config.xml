@@ -24,7 +24,7 @@
          backlight values for LUX levels between these control points.
 
          Must be overridden in platform specific overlays -->
-    <array name="config_autoBrightnessLevels">
+    <integer-array name="config_autoBrightnessLevels">
         <item>2</item>
         <item>4</item>
         <item>5</item>
@@ -35,7 +35,10 @@
         <item>1250</item>
         <item>3500</item>
         <item>5500</item>
-    </array>
+        <item>10000</item>
+        <item>50000</item>
+        <item>100000</item>
+    </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
@@ -50,8 +53,8 @@
          This array should have size one greater than the size of the config_autoBrightnessLevels
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
-    <array name="config_autoBrightnessDisplayValuesNits">
-        <item>2</item>
+    <integer-array name="config_autoBrightnessDisplayValuesNits">
+        <item>3</item>
         <item>7</item>
         <item>10</item>
         <item>12</item>
@@ -60,28 +63,33 @@
         <item>111</item>
         <item>149</item>
         <item>192</item>
-        <item>252</item>
+        <item>325</item>
         <item>500</item>
-    </array>
+        <item>700</item>
+        <item>800</item>
+        <item>1000</item>
+    </integer-array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
 
          This array should be equal in size to config_screenBrightnessBacklight. -->
-    <array name="config_screenBrightnessBacklight">
-        <item>0</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>12</item>
-        <item>48</item>
-        <item>57</item>
-        <item>76</item>
-        <item>98</item>
-        <item>129</item>
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>7</item>
+        <item>27</item>
+        <item>33</item>
+        <item>37</item>
+        <item>52</item>
+        <item>102</item>
+        <item>111</item>
+        <item>127</item>
+        <item>141</item>
+        <item>182</item>
+        <item>219</item>
+        <item>233</item>
+        <item>241</item>
         <item>255</item>
-    </array>
+    </integer-array>
 
     <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
          values in the config_screenBrightnessBacklight array.  On OLED displays these  values
@@ -90,9 +98,8 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
 
          This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>0</item>
-        <item>5</item>
+    <integer-array name="config_screenBrightnessNits">
+        <item>3</item>
         <item>7</item>
         <item>10</item>
         <item>12</item>
@@ -101,9 +108,12 @@
         <item>111</item>
         <item>149</item>
         <item>192</item>
-        <item>252</item>
+        <item>325</item>
         <item>500</item>
-    </array>
+        <item>700</item>
+        <item>800</item>
+        <item>1000</item>
+    </integer-array>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
@@ -137,8 +147,8 @@
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
         M -35,0
         L 35,0
-		L 35,105
-		L -35,105
+		L 35,112
+		L -35,112
 		Z
 	</string>
 
@@ -199,14 +209,14 @@
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <array name="config_udfps_sensor_props" translatable="false" >
         <item>540</item> <!-- sensorLocationX -->
-        <item>2164</item> <!-- sensorLocationY -->
+        <item>2141</item> <!-- sensorLocationY -->
         <item>91</item> <!-- sensorRadius -->
     </array>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">2</integer>
+    <integer name="config_screenBrightnessDim">1</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
@@ -261,7 +271,7 @@
     </array>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motorolaedge30ultra</string>
+    <string name="config_mms_user_agent" translatable="false">motorolaedge40pro</string>
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
 
