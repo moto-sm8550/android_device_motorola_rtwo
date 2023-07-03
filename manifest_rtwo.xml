@@ -7,13 +7,13 @@
             <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
-        <interface>
+        <!--<interface>
             <name>ISunlightEnhancement</name>
             <instance>default</instance>
         </interface>
         <interface>
             <name>IAntiFlicker</name>
             <instance>default</instance>
-        </interface>
+        </interface>-->
 	</hal>
 </manifest>
