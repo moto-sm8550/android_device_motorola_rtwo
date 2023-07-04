@@ -29,8 +29,9 @@ TARGET_BOOTLOADER_BOARD_NAME := rtwo
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_rtwo.xml
 DEVICE_MANIFEST_CAPE_FILES += $(DEVICE_PATH)/manifest_rtwo.xml
-ODM_MANIFEST_SKUS += dne
-ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_rtwo_ese.xml
+ODM_MANIFEST_SKUS += dn dne
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/manifest_rtwo_dn.xml
+ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_rtwo_dne.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
