@@ -581,6 +581,14 @@ vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 # Dolby vision
 vendor/etc/dolby_vision.cfg
 
+# Ese Powermanagement
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/libesepmconfig.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
+
 # Fingerprint
 vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_hal.so
@@ -646,6 +654,14 @@ vendor/lib64/libsn220u_fw.so
 
 # OEM
 vendor/etc/vhw.xml
+
+# Secure Element
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/jcos_nq_client.so
+vendor/lib64/ls_nq_client.so
+vendor/lib64/se_nq_extn_client.so
 
 # Sensors
 vendor/lib64/panel_als_comp_filter_rtwo.so
