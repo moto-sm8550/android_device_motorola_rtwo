@@ -4,5 +4,8 @@ bluetooth.device.default_name=motorola edge 40 pro
 # Camera
 persist.vendor.camera.physical.num=4
 
+# Fingerprint
+ro.hardware.fingerprint=goodix
+
 # Motorola
 ro.mot.build.customerid=global
