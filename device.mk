@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/usecaseKvManager_prc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager_prc.xml \
     $(LOCAL_PATH)/audio/usecaseKvManager_tmo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager_tmo.xml
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.rtwo
+
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
