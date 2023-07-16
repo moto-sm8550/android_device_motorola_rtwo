@@ -172,9 +172,7 @@ mac80211.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qrtr-gunyah.ko
-qca_cld3_kiwi.ko
 qca_cld3_kiwi_v2.ko
-qca_cld3_qca6490.ko
 cnss2.ko
 cnss_plat_ipc_qmi_svc.ko
 wlan_firmware_service.ko
@@ -250,9 +248,7 @@ qce50_dlkm.ko
 hdcp_qseecom_dlkm.ko
 qrng_dlkm.ko
 smcinvoke_dlkm.ko
-qca_cld3_kiwi.ko
 qca_cld3_kiwi_v2.ko
-qca_cld3_qca6490.ko
 cnss2.ko
 cnss_plat_ipc_qmi_svc.ko
 wlan_firmware_service.ko
