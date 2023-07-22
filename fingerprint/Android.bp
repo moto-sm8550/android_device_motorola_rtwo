@@ -12,7 +12,6 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libhidlbase",
-        "libMotoPanelFeature",
         "liblog",
         "libutils",
         "android.hardware.biometrics.fingerprint@2.1",

@@ -21,7 +21,6 @@
 #include <android-base/logging.h>
 #include <fcntl.h>
 #include <poll.h>
-#include <sys/ioctl.h>
 #include <sys/stat.h>
 
 #include <chrono>
@@ -29,10 +28,10 @@
 #include <fstream>
 #include <thread>
 
-#include <libMotoPanelFeature.h>
-
 #define NOTIFY_FINGER_UP IMotFodEventType::FINGER_UP
 #define NOTIFY_FINGER_DOWN IMotFodEventType::FINGER_DOWN
+
+#define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
 
 namespace android {
 namespace hardware {
@@ -42,7 +41,7 @@ namespace V2_3 {
 namespace implementation {
 
 void setFodHbm(bool status) {
-    setFodHbmState(status);
+    android::base::WriteStringToFile(status ? "1" : "0", FOD_HBM_PATH);
 }
 
 void BiometricsFingerprint::disableHighBrightFod() {
