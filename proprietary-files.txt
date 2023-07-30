@@ -672,6 +672,7 @@ vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 
 # Sensors
+vendor/bin/mot_vsync_psd
 vendor/lib64/panel_als_comp_filter_rtwo.so
 vendor/lib64/sensors.moto.so
 vendor/lib64/sensors.ssc.so
