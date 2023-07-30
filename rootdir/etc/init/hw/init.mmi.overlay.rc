@@ -59,34 +59,6 @@ on boot
     # max readyfor apps
     setprop ro.vendor.config.max_readyfor_apps 4
 
-service vendor.netconfig /vendor/bin/vendor_netconfig
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-
-on boot && property:ro.bootmode=mot-factory
-    start vendor.netconfig
-
-service vendor.start_dhrystone /vendor/bin/init.dhrystone.sh -d 300
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-
-service vendor.stop_dhrystone /vendor/bin/init.dhrystone.sh -s stop
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-
-on property:persist.vendor.dhrystone.status=0
-    start vendor.stop_dhrystone
-    start thermal-engine
-
 service vendor.mot_vsync_psd /vendor/bin/mot_vsync_psd
     class late_start
     user root
@@ -96,10 +68,6 @@ service vendor.capsense_reset /vendor/bin/capsense_reset
    user system
    group system input
    disabled
-
-on property:persist.vendor.dhrystone.status=1
-    stop thermal-engine
-    start vendor.start_dhrystone
 
 service vendor.copy_qc_cert /vendor/bin/copy_qc_cert.sh
     class main
