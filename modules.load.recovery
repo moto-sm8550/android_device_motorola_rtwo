@@ -275,8 +275,6 @@ msm_ext_display.ko
 sync_fence.ko
 msm_hw_fence.ko
 msm-mmrm.ko
-hdcp_qseecom_dlkm.ko
-smcinvoke_dlkm.ko
 goodix_brl_mmi.ko
 mmi_annotate.ko
 mmi_info.ko
