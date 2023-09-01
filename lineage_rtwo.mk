@@ -33,7 +33,7 @@ PRODUCT_MODEL := motorola edge 40 pro
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=rtwo_ge \
-    PRIVATE_BUILD_DESC="rtwo_ge-user 13 T1TRS33.43-20-28-2 888045-8d5819 release-keys"
+    TARGET_PRODUCT=rtwo_g \
+    PRIVATE_BUILD_DESC="rtwo_g-user 13 T1TRS33.43-48-21-2 5df599e-2fca1 release-keys"
 
-BUILD_FINGERPRINT := motorola/rtwo_ge/rtwo:13/T1TRS33.43-20-28-2/888045-8d5819:user/release-keys
+BUILD_FINGERPRINT := motorola/rtwo_g/rtwo:13/T1TRS33.43-48-21-2/5df599e-2fca1:user/release-keys

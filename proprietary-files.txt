@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from 13-T1TRS33.43-20-28-2 888045-8d5819 release-keys.
+# All unpinned blobs below are extracted from 13 T1TRS33.43-48-21-2 5df599e-2fca1 release-keys.
 
 # ACDB Data
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -682,6 +682,8 @@ vendor/lib64/sensors.ssc.so
 vendor/etc/sensors/als_comp_config.xml
 vendor/etc/sensors/als_comp_tf_csot.config
 vendor/etc/sensors/als_comp_tf_csot_dc.config
+vendor/etc/sensors/als_comp_tf_tianma.config
+vendor/etc/sensors/als_comp_tf_tianma_dc.config
 vendor/etc/sensors/config/bmp5_0.json
 vendor/etc/sensors/config/icp201xx_0.json
 vendor/etc/sensors/config/kailua_irq.json
