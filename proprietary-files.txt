@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from 13 T1TRS33.43-48-21-2 5df599e-2fca1 release-keys.
+# All unpinned blobs below are extracted from 13 T1TRS33.43-48-35 e1efad-a7da9b release-keys.
 
 # ACDB Data
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -37,7 +37,6 @@ vendor/etc/aualgo/ainr_1.tflite
 vendor/etc/aualgo/ainr_2.tflite
 vendor/etc/aualgo/aualgo_azp.conf
 vendor/etc/aualgo/aualgo_sst.conf
-vendor/etc/aualgo/aualgo_sst.dat
 vendor/etc/aualgo_arp_conf.inix
 
 # Camera
@@ -598,8 +597,8 @@ product/priv-app/EuiccGoogle/EuiccGoogle.apk
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
-vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
+vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
 
@@ -627,10 +626,10 @@ system_ext/bin/motsettings
 -system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
 
 # Moto Permissions
-product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml
-product/etc/permissions/com.motorola.camera3.rtwo.xml:vendor/etc/permissions/com.motorola.camera3.rtwo.xml
 product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com.motorola.camera3.lens.xml
+product/etc/permissions/com.motorola.camera3.rtwo.xml:vendor/etc/permissions/com.motorola.camera3.rtwo.xml
+product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
 product/etc/permissions/com.motorola.moto-uirefresh.xml
 product/etc/permissions/com.motorola.motodisplay.xml
 product/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml
