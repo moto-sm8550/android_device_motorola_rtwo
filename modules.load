@@ -371,5 +371,3 @@ goodix_fod_mmi.ko
 qpnp_adaptive_charge.ko
 mmi_sys_temp.ko
 msm_kgsl.ko
-zsmalloc.ko
-zram.ko
