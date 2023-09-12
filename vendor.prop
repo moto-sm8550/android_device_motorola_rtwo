@@ -11,6 +11,3 @@ ro.camera.enableCamera1MaxZsl=1
 
 # Fingerprint
 ro.hardware.fingerprint=goodix
-
-# Motorola
-ro.mot.build.customerid=global
