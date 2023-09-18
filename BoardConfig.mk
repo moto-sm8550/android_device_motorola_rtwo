@@ -47,30 +47,30 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVIC
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(DEVICE_PATH)/modules.load.recovery $(DEVICE_PATH)/modules.load.vendor_ramdisk))
 
 TARGET_KERNEL_EXT_MODULES := \
-  qcom/mmrm-driver \
-  qcom/mm-drivers/hw_fence \
-  qcom/mm-drivers/msm_ext_display \
-  qcom/mm-drivers/sync_fence \
-  qcom/audio-kernel \
-  qcom/camera-kernel \
-  qcom/dataipa/drivers/platform/msm \
-  qcom/datarmnet/core \
-  qcom/datarmnet-ext/aps \
-  qcom/datarmnet-ext/offload \
-  qcom/datarmnet-ext/shs \
-  qcom/datarmnet-ext/perf \
-  qcom/datarmnet-ext/perf_tether \
-  qcom/datarmnet-ext/sch \
-  qcom/datarmnet-ext/wlan \
-  qcom/securemsm-kernel \
-  qcom/display-drivers/msm \
-  qcom/eva-kernel \
-  qcom/video-driver \
-  qcom/graphics-kernel \
-  qcom/wlan/platform \
-  qcom/wlan/qcacld-3.0/.kiwi_v2 \
-  qcom/bt-kernel \
-  nxp/driver \
+  qcom/opensource/mmrm-driver \
+  qcom/opensource/mm-drivers/hw_fence \
+  qcom/opensource/mm-drivers/msm_ext_display \
+  qcom/opensource/mm-drivers/sync_fence \
+  qcom/opensource/audio-kernel \
+  qcom/opensource/camera-kernel \
+  qcom/opensource/dataipa/drivers/platform/msm \
+  qcom/opensource/datarmnet/core \
+  qcom/opensource/datarmnet-ext/aps \
+  qcom/opensource/datarmnet-ext/offload \
+  qcom/opensource/datarmnet-ext/shs \
+  qcom/opensource/datarmnet-ext/perf \
+  qcom/opensource/datarmnet-ext/perf_tether \
+  qcom/opensource/datarmnet-ext/sch \
+  qcom/opensource/datarmnet-ext/wlan \
+  qcom/opensource/securemsm-kernel \
+  qcom/opensource/display-drivers/msm \
+  qcom/opensource/eva-kernel \
+  qcom/opensource/video-driver \
+  qcom/opensource/graphics-kernel \
+  qcom/opensource/wlan/platform \
+  qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
+  qcom/opensource/bt-kernel \
+  nxp/opensource/driver \
   motorola/drivers/mmi_annotate \
   motorola/drivers/mmi_info \
   motorola/drivers/power/bm_adsp_ulog \
