@@ -93,3 +93,4 @@ bcl_pmic5.ko
 nvme-core.ko
 nvme.ko
 debug_symbol.ko
+qrng_dlkm.ko
