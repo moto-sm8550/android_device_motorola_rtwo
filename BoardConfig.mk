@@ -22,6 +22,9 @@ include device/motorola/sm8550-common/BoardConfigCommon.mk
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := rtwo
 
+# Display
+TARGET_SCREEN_DENSITY := 400
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_rtwo.xml
 DEVICE_MANIFEST_KALAMA_FILES += $(DEVICE_PATH)/manifest_rtwo.xml
