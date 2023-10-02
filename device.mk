@@ -112,8 +112,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine-rtwo.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rtwo.conf
+
 # Touch
-# PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.rtwo
 
