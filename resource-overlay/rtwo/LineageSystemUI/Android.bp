@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "LineageSystemUIRtwo",
-    vendor: true,
+    product_specific: true,
 }
