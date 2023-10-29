@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     LineageSystemUIRtwo \
     ProductFrameworksResRtwo \
     SettingsProviderResRtwo \
+    SettingsResRtwo \
     SystemUIResRtwo
 
 # Audio
