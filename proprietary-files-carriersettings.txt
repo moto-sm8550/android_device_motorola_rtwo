@@ -359,7 +359,6 @@ product/etc/CarrierSettings/s23211.pb
 product/etc/CarrierSettings/s23212.pb
 product/etc/CarrierSettings/s23214.pb
 product/etc/CarrierSettings/s23401.pb
-product/etc/CarrierSettings/s23402.pb
 product/etc/CarrierSettings/s23403.pb
 product/etc/CarrierSettings/s23408gid1_3d_b2ff.pb
 product/etc/CarrierSettings/s23408gid1_3d_b2.pb
@@ -376,7 +375,6 @@ product/etc/CarrierSettings/s23410gid1_3d_99.pb
 product/etc/CarrierSettings/s23410.pb
 product/etc/CarrierSettings/s23410spn_3d_giffgaff.pb
 product/etc/CarrierSettings/s23410spn_3d_jump.pb
-product/etc/CarrierSettings/s23411.pb
 product/etc/CarrierSettings/s23415gid1_3d_b3.pb
 product/etc/CarrierSettings/s23415gid1_3d_c1.pb
 product/etc/CarrierSettings/s23415.pb
@@ -649,8 +647,6 @@ product/etc/CarrierSettings/s26206gid1_3d_4b.pb
 product/etc/CarrierSettings/s26206gid1_3d_99.pb
 product/etc/CarrierSettings/s26206.pb
 product/etc/CarrierSettings/s26206spn_3d_business.pb
-product/etc/CarrierSettings/s26206spn_3d_congstar_2e_de.pb
-product/etc/CarrierSettings/s26206spn_3d_congstar.pb
 product/etc/CarrierSettings/s26206spn_3d_privat.pb
 product/etc/CarrierSettings/s26206spn_3d_t_2d_campus.pb
 product/etc/CarrierSettings/s26206spn_3d_t_2d_mobile_20_d.pb
@@ -682,6 +678,9 @@ product/etc/CarrierSettings/s26803.pb
 product/etc/CarrierSettings/s26806.pb
 product/etc/CarrierSettings/s26880.pb
 product/etc/CarrierSettings/s26889.pb
+product/etc/CarrierSettings/s26897.pb
+product/etc/CarrierSettings/s26898.pb
+product/etc/CarrierSettings/s26899.pb
 product/etc/CarrierSettings/s27001.pb
 product/etc/CarrierSettings/s27002.pb
 product/etc/CarrierSettings/s27077gid1_3d_bb00.pb
@@ -730,6 +729,7 @@ product/etc/CarrierSettings/s29370imsi_3d_29370029xxxxxxx.pb
 product/etc/CarrierSettings/s29370.pb
 product/etc/CarrierSettings/s29401gid1_3d_ff.pb
 product/etc/CarrierSettings/s29401.pb
+product/etc/CarrierSettings/s29401spn_3d_t_2d_mobile_20_mk.pb
 product/etc/CarrierSettings/s29401spn_3d_telekom_20_mk.pb
 product/etc/CarrierSettings/s29401spn_3d_telekom_2e_mk.pb
 product/etc/CarrierSettings/s29402.pb
@@ -779,7 +779,6 @@ product/etc/CarrierSettings/s302370gid1_3d_dd.pb
 product/etc/CarrierSettings/s302370.pb
 product/etc/CarrierSettings/s302370spn_3d_cnt.pb
 product/etc/CarrierSettings/s302370spn_3d_mts.pb
-product/etc/CarrierSettings/s30237.pb
 product/etc/CarrierSettings/s302490gid1_3d_53.pb
 product/etc/CarrierSettings/s302490.pb
 product/etc/CarrierSettings/s302500gid1_3d_55.pb
@@ -814,6 +813,8 @@ product/etc/CarrierSettings/s302660gid1_3d_4d.pb
 product/etc/CarrierSettings/s302660spn_3d_mts.pb
 product/etc/CarrierSettings/s302680.pb
 product/etc/CarrierSettings/s30268.pb
+product/etc/CarrierSettings/s302690gid1_3d_41.pb
+product/etc/CarrierSettings/s302690gid1_3d_43.pb
 product/etc/CarrierSettings/s302690.pb
 product/etc/CarrierSettings/s302720gid1_3d_a4.pb
 product/etc/CarrierSettings/s302720gid1_3d_ba.pb
@@ -1194,6 +1195,7 @@ product/etc/CarrierSettings/s310240gid1_3d_514c.pb
 product/etc/CarrierSettings/s310240gid1_3d_534d.pb
 product/etc/CarrierSettings/s310240gid1_3d_554d.pb
 product/etc/CarrierSettings/s310240gid1_3d_6132.pb
+product/etc/CarrierSettings/s310240gid1_3d_6134.pb
 product/etc/CarrierSettings/s310240gid1_3d_6230.pb
 product/etc/CarrierSettings/s310240gid1_3d_6303.pb
 product/etc/CarrierSettings/s310240gid1_3d_6430.pb
@@ -1204,6 +1206,8 @@ product/etc/CarrierSettings/s310240gid1_3d_6438.pb
 product/etc/CarrierSettings/s310240gid1_3d_6440.pb
 product/etc/CarrierSettings/s310240gid1_3d_6901.pb
 product/etc/CarrierSettings/s310240gid1_3d_6902.pb
+product/etc/CarrierSettings/s310240gid1_3d_6905.pb
+product/etc/CarrierSettings/s310240gid1_3d_6909.pb
 product/etc/CarrierSettings/s310240gid1_3d_6941.pb
 product/etc/CarrierSettings/s310240gid1_3d_6957.pb
 product/etc/CarrierSettings/s310240gid1_3d_6c79.pb
@@ -1212,6 +1216,7 @@ product/etc/CarrierSettings/s310240gid1_3d_7031.pb
 product/etc/CarrierSettings/s310240gid1_3d_7032.pb
 product/etc/CarrierSettings/s310240gid1_3d_7531.pb
 product/etc/CarrierSettings/s310240gid1_3d_756d.pb
+product/etc/CarrierSettings/s310240gid1_3d_ddff.pb
 product/etc/CarrierSettings/s310240gid1_3d_deff.pb
 product/etc/CarrierSettings/s310240.pb
 product/etc/CarrierSettings/s310250gid1_3d_1a53.pb
@@ -1389,6 +1394,7 @@ product/etc/CarrierSettings/s310570.pb
 product/etc/CarrierSettings/s310580.pb
 product/etc/CarrierSettings/s310580spn_3d_sprint.pb
 product/etc/CarrierSettings/s310590gid1_3d_ba01270000000000.pb
+product/etc/CarrierSettings/s310590gid1_3d_ba01450000000000.pb
 product/etc/CarrierSettings/s310590.pb
 product/etc/CarrierSettings/s310591gid1_3d_ba01270000000000.pb
 product/etc/CarrierSettings/s310591.pb
@@ -1507,6 +1513,8 @@ product/etc/CarrierSettings/s311180gid1_3d_3430.pb
 product/etc/CarrierSettings/s311180gid1_3d_3432.pb
 product/etc/CarrierSettings/s311180gid1_3d_3434.pb
 product/etc/CarrierSettings/s311180gid1_3d_3436.pb
+product/etc/CarrierSettings/s311180gid1_3d_3438.pb
+product/etc/CarrierSettings/s311180gid1_3d_3440.pb
 product/etc/CarrierSettings/s311180gid1_3d_4102.pb
 product/etc/CarrierSettings/s311180gid1_3d_4201.pb
 product/etc/CarrierSettings/s311180gid1_3d_44ff.pb
@@ -2582,6 +2590,7 @@ product/etc/CarrierSettings/s50507.pb
 product/etc/CarrierSettings/s50511.pb
 product/etc/CarrierSettings/s50512.pb
 product/etc/CarrierSettings/s50538.pb
+product/etc/CarrierSettings/s50539.pb
 product/etc/CarrierSettings/s50571.pb
 product/etc/CarrierSettings/s50572.pb
 product/etc/CarrierSettings/s50588.pb
@@ -2878,7 +2887,6 @@ product/etc/CarrierSettings/s722010gid1_3d_01.pb
 product/etc/CarrierSettings/s722010.pb
 product/etc/CarrierSettings/s72201gid1_3d_02.pb
 product/etc/CarrierSettings/s72201.pb
-product/etc/CarrierSettings/s722070.pb
 product/etc/CarrierSettings/s72207.pb
 product/etc/CarrierSettings/s722310.pb
 product/etc/CarrierSettings/s72231.pb
