@@ -41,8 +41,6 @@ vendor/etc/aualgo_arp_conf.inix
 
 # Camera
 vendor/etc/eva/facedetection/model3.dat
-vendor/etc/pwr/PowerFeatureConfig.xml
-vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/camera/com.qti.ois.mot_dw9784.so
 vendor/lib/camera/fdconfigpreview.bin
 vendor/lib/camera/fdconfigpreviewlite.bin
@@ -79,8 +77,6 @@ vendor/lib/libchilog.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libcommonchiutils.so
 vendor/lib/libcud_model_raw.so
-vendor/lib/libeva.so
-vendor/lib/libeva_util.so
 vendor/lib/libface3d_dev.so
 vendor/lib/libfcell.so
 vendor/lib/libhdr10plus.so
@@ -123,7 +119,6 @@ vendor/lib/libtfestriping.so
 vendor/lib/libthreadutils.so
 vendor/lib/libubifocus.so
 vendor/lib/libvideoml.so
-vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
 vendor/lib/vendor.qti.hardware.camera.aon-service-impl.so
@@ -188,8 +183,6 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libcud_model_raw.so
 vendor/lib64/libdlrmsc.so
-vendor/lib64/libeva.so
-vendor/lib64/libeva_util.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libfcell.so
@@ -241,7 +234,6 @@ vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libvideoml.so
-vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
