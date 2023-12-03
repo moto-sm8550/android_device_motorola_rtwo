@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from rtwo_g-user 13 T1TR33.43-48-41 49227-28ba2 release-keys.
+# All unpinned blobs below are extracted from rtwo_cn-user 14 U1TR34.8-19-2 9bfa3-adc28 release-keys.
 
 # ACDB Data
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -29,100 +29,17 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 
 # Audio libraries
-vendor/lib/libar-acdb.so
 vendor/lib64/libar-acdb.so
 
 # Audio - aualgo config
-vendor/etc/aualgo/ainr_1.tflite
-vendor/etc/aualgo/ainr_2.tflite
-vendor/etc/aualgo/aualgo_azp.conf
+vendor/etc/aualgo/ainr_tfv2.dat
+vendor/etc/aualgo/aualgo_ainr.conf
+vendor/etc/aualgo/aualgo_arp.conf
+vendor/etc/aualgo/aualgo_comp_azpp.conf
 vendor/etc/aualgo/aualgo_sst.conf
-vendor/etc/aualgo_arp_conf.inix
 
 # Camera
 vendor/etc/eva/facedetection/model3.dat
-vendor/lib/camera/com.qti.ois.mot_dw9784.so
-vendor/lib/camera/fdconfigpreview.bin
-vendor/lib/camera/fdconfigpreviewlite.bin
-vendor/lib/camera/fdconfigvideo.bin
-vendor/lib/camera/fdconfigvideolite.bin
-vendor/lib/com.qti.camx.chiiqutils.so
-vendor/lib/com.qti.chiusecaseselector.so
-vendor/lib/com.qti.qseeaon.so
-vendor/lib/com.qti.qseeutils.so
-vendor/lib/com.qti.settings.sm8550.so
-vendor/lib/com.qti.stats.common.so
-vendor/lib/com.qualcomm.mcx.distortionmapper.so
-vendor/lib/com.qualcomm.mcx.linearmapper.so
-vendor/lib/com.qualcomm.mcx.nonlinearmapper.so
-vendor/lib/com.qualcomm.mcx.policy.mfl.so
-vendor/lib/com.qualcomm.mcx.policy.xr.so
-vendor/lib/com.qualcomm.qti.mcx.usecase.extension.so
-vendor/lib/cud_model_raw.tflite
-vendor/lib/hw/camera.qcom.so
-vendor/lib/hw/com.qti.chi.offline.so
-vendor/lib/hw/com.qti.chi.override.so
-vendor/lib/libFace3DTA.so
-vendor/lib/libFace3D_hlos.so
-vendor/lib/libQ6MSFR_manager_stub.so
-vendor/lib/liba2d_helper.so
-vendor/lib/libaidenoiser.so
-vendor/lib/libaidenoiserv2.so
-vendor/lib/libarcsoft_chi_utils.so
-vendor/lib/libbitmlengine.so
-vendor/lib/libbitmlenginev2.so
-vendor/lib/libcamerapostproc.so
-vendor/lib/libchifeature2.so
-vendor/lib/libchilog.so
-vendor/lib/libcom.qti.chinodeutils.so
-vendor/lib/libcommonchiutils.so
-vendor/lib/libcud_model_raw.so
-vendor/lib/libface3d_dev.so
-vendor/lib/libfcell.so
-vendor/lib/libhdr10plus.so
-vendor/lib/libhme.so
-vendor/lib/libipebpsstriping.so
-vendor/lib/libipebpsstriping170.so
-vendor/lib/libipebpsstriping480.so
-vendor/lib/libisphwsetting.so
-vendor/lib/libjpege.so
-vendor/lib/libmctfengine_stub.so
-vendor/lib/libmfGhostDetection.so
-vendor/lib/libmfec.so
-vendor/lib/libmmcamera_bestats.so
-vendor/lib/libmmcamera_cac3.so
-vendor/lib/libmmcamera_lscv35.so
-vendor/lib/libmmcamera_mfnr.so
-vendor/lib/libmmcamera_mfnr_t4.so
-vendor/lib/libmmcamera_pdpc.so
-vendor/lib/libmot_afd.so
-vendor/lib/libmot_chi_desktop_helper.so
-vendor/lib/libmot_engine_settings.so
-vendor/lib/libmotcameramodulemonitor.so
-vendor/lib/libmotoisdataqueue.so
-vendor/lib/libopencv.so
-vendor/lib/libopencv3a.so
-vendor/lib/libopestriping.so
-vendor/lib/libos.so
-vendor/lib/libportrait_repair_ppl3_ocl.so
-vendor/lib/libpowercore.so
-vendor/lib/libqll.so
-vendor/lib/libqll10.so
-vendor/lib/libqllengine.so
-vendor/lib/libqsegnet.so
-vendor/lib/libqshcamera.so
-vendor/lib/libremosaic_wrapper.so
-vendor/lib/libsfeShiftExtrapolation.so
-vendor/lib/libswregistrationalgo.so
-vendor/lib/libsynx.so
-vendor/lib/libtfestriping.so
-vendor/lib/libthreadutils.so
-vendor/lib/libubifocus.so
-vendor/lib/libvideoml.so
-vendor/lib/libvideoutils.so
-vendor/lib/libvidhance.so
-vendor/lib/vendor.qti.hardware.camera.aon-service-impl.so
-vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/camera/arcsoft_dc_calibration_u.bin
 vendor/lib64/camera/com.qti.ois.mot_dw9784.so
 vendor/lib64/camera/fdconfigpreview.bin
@@ -197,7 +114,7 @@ vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
 vendor/lib64/libmmcamera_bestats.so
-vendor/lib64/libmmcamera_cac3.so
+vendor/lib64/libmmcamera_cac.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
@@ -239,22 +156,6 @@ vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera - camx
-vendor/lib/camx.device-impl.so
-vendor/lib/camx.provider-impl.so
-vendor/lib/libcamxcommonutils.so
-vendor/lib/libcamxexternalformatutils.so
-vendor/lib/libcamxfacialfeatures.so
-vendor/lib/libcamxfdalgo.so
-vendor/lib/libcamxfdengine.so
-vendor/lib/libcamxhwnodecontext.so
-vendor/lib/libcamxifestriping.so
-vendor/lib/libcamximageformatutils.so
-vendor/lib/libcamxqsatalgo.so
-vendor/lib/libcamxsettingsmanager.so
-vendor/lib/libcamxstatscore.so
-vendor/lib/libcamxswispiqmodule.so
-vendor/lib/libcamxswprocessalgo.so
-vendor/lib/libcamxtintlessalgo.so
 vendor/lib64/camx.device-impl.so
 vendor/lib64/camx.provider-impl.so
 vendor/lib64/libcamxcommonutils.so
@@ -273,74 +174,6 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 
 # Camera - Components
-vendor/lib/camera/components/com.mot.node.c2d.so
-vendor/lib/camera/components/com.mot.node.tfraw.so
-vendor/lib/camera/components/com.qti.eisv2.so
-vendor/lib/camera/components/com.qti.eisv3.so
-vendor/lib/camera/components/com.qti.hvx.addconstant.so
-vendor/lib/camera/components/com.qti.hvx.binning.so
-vendor/lib/camera/components/com.qti.node.afbfusion.so
-vendor/lib/camera/components/com.qti.node.aon.so
-vendor/lib/camera/components/com.qti.node.customhwnode.so
-vendor/lib/camera/components/com.qti.node.depth.so
-vendor/lib/camera/components/com.qti.node.depthprovider.so
-vendor/lib/camera/components/com.qti.node.dewarp.so
-vendor/lib/camera/components/com.qti.node.dummydepth.so
-vendor/lib/camera/components/com.qti.node.dummyrtb.so
-vendor/lib/camera/components/com.qti.node.dummysat.so
-vendor/lib/camera/components/com.qti.node.eisv2.so
-vendor/lib/camera/components/com.qti.node.eisv3.so
-vendor/lib/camera/components/com.qti.node.fcv.so
-vendor/lib/camera/components/com.qti.node.formatconversion.so
-vendor/lib/camera/components/com.qti.node.gme.so
-vendor/lib/camera/components/com.qti.node.gpu.so
-vendor/lib/camera/components/com.qti.node.gyrornn.so
-vendor/lib/camera/components/com.qti.node.hdr10pgen.so
-vendor/lib/camera/components/com.qti.node.hdr10phist.so
-vendor/lib/camera/components/com.qti.node.memcpy.so
-vendor/lib/camera/components/com.qti.node.ml.so
-vendor/lib/camera/components/com.qti.node.muxer.so
-vendor/lib/camera/components/com.qti.node.rawsvq.so
-vendor/lib/camera/components/com.qti.node.remosaic.so
-vendor/lib/camera/components/com.qti.node.seg.so
-vendor/lib/camera/components/com.qti.node.stich.so
-vendor/lib/camera/components/com.qti.node.swaidenoiser.so
-vendor/lib/camera/components/com.qti.node.swbestats.so
-vendor/lib/camera/components/com.qti.node.swcac.so
-vendor/lib/camera/components/com.qti.node.swec.so
-vendor/lib/camera/components/com.qti.node.swfusion.so
-vendor/lib/camera/components/com.qti.node.swhme.so
-vendor/lib/camera/components/com.qti.node.swlsc.so
-vendor/lib/camera/components/com.qti.node.swmctf.so
-vendor/lib/camera/components/com.qti.node.swpdpc.so
-vendor/lib/camera/components/com.qti.node.swpreprocess.so
-vendor/lib/camera/components/com.qti.node.swregistration.so
-vendor/lib/camera/components/com.qti.node.swvrt.so
-vendor/lib/camera/components/com.qti.stats.aec.so
-vendor/lib/camera/components/com.qti.stats.aecwrapper.so
-vendor/lib/camera/components/com.qti.stats.aecxcore.so
-vendor/lib/camera/components/com.qti.stats.af.so
-vendor/lib/camera/components/com.qti.stats.afd.so
-vendor/lib/camera/components/com.qti.stats.afwrapper.so
-vendor/lib/camera/components/com.qti.stats.asd.so
-vendor/lib/camera/components/com.qti.stats.awb.so
-vendor/lib/camera/components/com.qti.stats.awbwrapper.so
-vendor/lib/camera/components/com.qti.stats.cnndriver.so
-vendor/lib/camera/components/com.qti.stats.haf.so
-vendor/lib/camera/components/com.qti.stats.hafoverride.so
-vendor/lib/camera/components/com.qti.stats.localhistogram.so
-vendor/lib/camera/components/com.qti.stats.pdlib.so
-vendor/lib/camera/components/com.qti.stats.pdlibsony.so
-vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so
-vendor/lib/camera/components/com.qti.stats.statsgenerator.so
-vendor/lib/camera/components/com.qti.stats.tracker.so
-vendor/lib/camera/components/com.qtistatic.stats.aec.so
-vendor/lib/camera/components/com.qtistatic.stats.af.so
-vendor/lib/camera/components/com.qtistatic.stats.awb.so
-vendor/lib/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib/camera/components/com.vidhance.node.ica.so
-vendor/lib/camera/components/com.vidhance.node.processing.so
-vendor/lib/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/com.arcsoft.node.dc_capture.so
 vendor/lib64/camera/components/com.arcsoft.node.objecttracking.so
 vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so
@@ -418,10 +251,6 @@ vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera - eeprom
-vendor/lib/camera/com.mot.eeprom.mot_gt24p128e_imx663_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p128e_ov50a_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p64e_ov60a_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_imx663_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_ov50a_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
@@ -442,30 +271,6 @@ vendor/etc/jiigan/jiigan_model.data
 vendor/etc/tetras/portrait_repair_composite.model
 
 # Camera - feature2
-vendor/lib/com.qti.feature2.afbrckt.so
-vendor/lib/com.qti.feature2.anchorsync.so
-vendor/lib/com.qti.feature2.arcrawpro.so
-vendor/lib/com.qti.feature2.demux.so
-vendor/lib/com.qti.feature2.derivedoffline.so
-vendor/lib/com.qti.feature2.frameselect.so
-vendor/lib/com.qti.feature2.fusion.so
-vendor/lib/com.qti.feature2.generic.so
-vendor/lib/com.qti.feature2.gs.sm8550.so
-vendor/lib/com.qti.feature2.hdr.so
-vendor/lib/com.qti.feature2.mcreprocrt.so
-vendor/lib/com.qti.feature2.memcpy.so
-vendor/lib/com.qti.feature2.mfsr.so
-vendor/lib/com.qti.feature2.ml.so
-vendor/lib/com.qti.feature2.mux.so
-vendor/lib/com.qti.feature2.qcfa.so
-vendor/lib/com.qti.feature2.rawhdr.so
-vendor/lib/com.qti.feature2.realtimeserializer.so
-vendor/lib/com.qti.feature2.rt.so
-vendor/lib/com.qti.feature2.rtmcx.so
-vendor/lib/com.qti.feature2.serializer.so
-vendor/lib/com.qti.feature2.statsregeneration.so
-vendor/lib/com.qti.feature2.stub.so
-vendor/lib/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.feature2.afbrckt.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.arcrawpro.so
@@ -521,8 +326,6 @@ vendor/firmware/CAMERA_ICP_170.elf
 # Camera - Motorola
 vendor/bin/hw/motorola.hardware.camera.desktop@2.0-service
 vendor/etc/init/motorola.hardware.camera.desktop@2.0-service.rc
-vendor/lib/motorola.hardware.camera.desktop@1.0.so
-vendor/lib/motorola.hardware.camera.desktop@2.0.so
 vendor/lib64/motorola.hardware.camera.desktop@1.0.so
 vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 
@@ -530,31 +333,18 @@ vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 vendor/firmware/mot_dw9784.prog
 
 # Camera - sensor
-vendor/lib/camera/com.qti.sensor.mot_imx663.so
-vendor/lib/camera/com.qti.sensor.mot_ov50a.so
-vendor/lib/camera/com.qti.sensor.mot_ov60a.so
-vendor/lib/camera/com.qti.sensor.mot_s5kjn1.so
 vendor/lib64/camera/com.qti.sensor.mot_imx663.so
 vendor/lib64/camera/com.qti.sensor.mot_ov50a.so
 vendor/lib64/camera/com.qti.sensor.mot_ov60a.so
 vendor/lib64/camera/com.qti.sensor.mot_s5kjn1.so
 
 # Camera - sensormodule
-vendor/lib/camera/com.qti.sensormodule.mot_rtwo_imx663_sunny.bin
-vendor/lib/camera/com.qti.sensormodule.mot_rtwo_ov50a_qtech.bin
-vendor/lib/camera/com.qti.sensormodule.mot_rtwo_ov60a_qtech.bin
-vendor/lib/camera/com.qti.sensormodule.mot_rtwo_s5kjn1_qtech.bin
 vendor/lib64/camera/com.qti.sensormodule.mot_rtwo_imx663_sunny.bin
 vendor/lib64/camera/com.qti.sensormodule.mot_rtwo_ov50a_qtech.bin
 vendor/lib64/camera/com.qti.sensormodule.mot_rtwo_ov60a_qtech.bin
 vendor/lib64/camera/com.qti.sensormodule.mot_rtwo_s5kjn1_qtech.bin
 
 # Camera - tuned
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.mot_rtwo_imx663.bin
-vendor/lib/camera/com.qti.tuned.mot_rtwo_ov50a.bin
-vendor/lib/camera/com.qti.tuned.mot_rtwo_ov60a.bin
-vendor/lib/camera/com.qti.tuned.mot_rtwo_s5kjn1.bin
 vendor/lib64/camera/com.qti.tuned.default.bin
 vendor/lib64/camera/com.qti.tuned.mot_rtwo_imx663.bin
 vendor/lib64/camera/com.qti.tuned.mot_rtwo_ov50a.bin
@@ -581,10 +371,10 @@ vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# eUICC
-product/app/EuiccPartnerApp/EuiccPartnerApp.apk
-product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
-product/priv-app/EuiccGoogle/EuiccGoogle.apk
+# eUICC - from motorola/rtwo_g/rtwo:13/T1TR33.43-48-41/49227-28ba2:user/release-keys
+product/app/EuiccPartnerApp/EuiccPartnerApp.apk|134967f91e11db5da58faff4a0bb862bda2bb1a1
+product/etc/permissions/privapp-permissions-com.google.android.euicc.xml|ef99fe93aa2ed629fef39c3dcc4b07c597c1f469
+product/priv-app/EuiccGoogle/EuiccGoogle.apk|e1f63b736410953ccf7591cfc3813e0360a9dfa4
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
@@ -594,37 +384,37 @@ vendor/lib64/hw/fingerprint.goodix.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so
 
-# HotwordEnrollment
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+# HotwordEnrollment - from motorola/rtwo_g/rtwo:13/T1TR33.43-48-41/49227-28ba2:user/release-keys
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk|6a060ccfd9f867f3e09fae09dff6f2d9201fe452
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|ae98926e4620b4108a22127d355be9f44c1e782e
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|99cfd80965c170f4885a7dd62c0eaad1a0c7840f
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
 
-# MotCamera3
-product/app/MotCamera3AI/MotCamera3AI.apk;PRESIGNED
-product/etc/permissions/com.motorola.camera3.xml
-product/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml
-product/etc/permissions/privapp-permissions-com.motorola.camera3.xml
-product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera3.xml
-product/priv-app/MotCamera4/MotCamera4.apk;OVERRIDES=Aperture;PRESIGNED
--system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
-system/etc/permissions/com.motorola.motosignature.xml
-system/etc/permissions/moto-core_services.xml
-system/etc/permissions/moto-settings.xml
-system/framework/com.motorola.motosignature.jar
-system/framework/moto-core_services.jar
-system/framework/moto-settings.jar
-system_ext/bin/motsettings
--system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
+# MotCamera3 - from motorola/rtwo_g/rtwo:13/T1TR33.43-48-41/49227-28ba2:user/release-keys
+product/app/MotCamera3AI/MotCamera3AI.apk;PRESIGNED|6f2c48d2cdf1de43471401dc54934faeb05265d2
+product/etc/permissions/com.motorola.camera3.xml|0d383cbc8f265d80e4f08c9bb9ecefe321a29a7d
+product/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml|7df06ec01397dfba8860c84f71805b0895d14087
+product/etc/permissions/privapp-permissions-com.motorola.camera3.xml|b759bdaf7baca0dcc8ee5e1d1faf51c78d43c4a1
+product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera3.xml|d99de1fb201aa63d9d543a41104013989fc84dc9
+product/priv-app/MotCamera4/MotCamera4.apk;OVERRIDES=Aperture;PRESIGNED|701a23eae2b51d9b73bd47127ffbf5eb3eefc406
+-system/app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED|315d0e5dc4565a046e4119fe203ab951f5e1cd72
+system/etc/permissions/com.motorola.motosignature.xml|657458b1f279e2158db87925dcd518d48f9afcf7
+system/etc/permissions/moto-core_services.xml|e04036b61adefe98f1e59e47e479d41e695ba94e
+system/etc/permissions/moto-settings.xml|32f6aeb6f8e9211542bf843ba106acc7ab7c2839
+system/framework/com.motorola.motosignature.jar|3b05b367afffd9b96031aba2b26dc3d24397c73a
+system/framework/moto-core_services.jar|1936fbbe645789c41a2fea3edc795e472063b405
+system/framework/moto-settings.jar|02fb105b6476b1e405a9527b8993347f00419213
+system_ext/bin/motsettings|629acaf083fb5fb9ea171c8e87115918043cae90
+-system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk|24f463c7f933140eabac397cd305c47bdc6cf496
 
-# Moto Permissions
-product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml
-product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com.motorola.camera3.lens.xml
-product/etc/permissions/com.motorola.camera3.rtwo.xml:vendor/etc/permissions/com.motorola.camera3.rtwo.xml
-product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml
-product/etc/permissions/com.motorola.moto-uirefresh.xml
-product/etc/permissions/com.motorola.motodisplay.xml
-product/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml
+# Moto Permissions - from motorola/rtwo_g/rtwo:13/T1TR33.43-48-41/49227-28ba2:user/release-keys
+product/etc/permissions/com.motorola.camera3.content.ai.xml:vendor/etc/permissions/com.motorola.camera3.content.ai.xml|261f857c62c97286f492b3f5c69ff11226a06af0
+product/etc/permissions/com.motorola.camera3.lens.xml:vendor/etc/permissions/com.motorola.camera3.lens.xml|7dfafac8d89447a1e0bc93fd5cea5ca6e5c20bee
+product/etc/permissions/com.motorola.camera3.rtwo.xml:vendor/etc/permissions/com.motorola.camera3.rtwo.xml|f3294bb3f8a743c2885e1e93251a42a5369c4d45
+product/etc/permissions/com.motorola.camera3.xml:vendor/etc/permissions/com.motorola.camera3.xml|0d383cbc8f265d80e4f08c9bb9ecefe321a29a7d
+product/etc/permissions/com.motorola.moto-uirefresh.xml|a5c91ea6d99ad0d14e6e13000516c89098621837
+product/etc/permissions/com.motorola.motodisplay.xml|8d2c13a91e2f89f61a82ec2dcfc1958b618a42a5
+product/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml|54a9493312161097ee7b424e0e5ebb0c20fd595e
 
 # NFC
 vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service

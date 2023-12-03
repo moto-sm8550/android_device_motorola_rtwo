@@ -25,6 +25,7 @@ on early-boot
     mkdir /mnt/vendor/persist/camera/gyro_compat 0770 vendor_tcmd camera
 # Create directory for wireless charge test in factory
     mkdir /data/vendor/wlc 0775 vendor_tcmd system
+    chmod 0775  /mnt/vendor/persist/sensors
     chown system system /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
     chmod 0664 /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
 
@@ -185,3 +186,16 @@ on property:vendor.usb.headset_reset=2
 on property:vendor.usb.headset_reset=0
     wait /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/headset_reset_delay 2
     write /sys/bus/platform/devices/${ro.boot.usb.dwc3_msm:-a600000.ssusb}/mode host
+
+on property:sys.usb.current_limit=1
+    write /sys/class/power_supply/battery/device/force_charger_suspend 1
+
+on property:sys.usb.current_limit=0
+   write /sys/class/power_supply/battery/device/force_charger_suspend 0
+
+# dynamic update vsync property
+on property:sys.display.pluggable_vsync_prioritized=1
+    setprop vendor.display.pluggable_vsync_prioritized 1
+
+on property:sys.display.pluggable_vsync_prioritized=0
+    setprop vendor.display.pluggable_vsync_prioritized 0
