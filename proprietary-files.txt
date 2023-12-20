@@ -183,6 +183,7 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libcud_model_raw.so
 vendor/lib64/libdlrmsc.so
+vendor/lib64/libdng_sdk.so
 vendor/lib64/libeye_tracking_dsp_sample_stub.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libfcell.so
