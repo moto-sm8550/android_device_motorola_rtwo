@@ -3,6 +3,7 @@ bluetooth.device.default_name=motorola edge 40 pro
 
 # Camera
 persist.vendor.camera.physical.num=4
+ro.camera.enableCamera1MaxZsl=1
 
 # Fingerprint
 ro.hardware.fingerprint=goodix
