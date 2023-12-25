@@ -1,9 +1,6 @@
 
 # This is for Moto rtwo device init rc file
 on fs
-    insmod /vendor/lib/modules/wl2868c.ko
-    insmod /vendor/lib/modules/sensors_class.ko
-    insmod /vendor/lib/modules/sx937x_multi.ko
     #zram wb
     mount_all /vendor/etc/fstab.qcom.zram --early
 
