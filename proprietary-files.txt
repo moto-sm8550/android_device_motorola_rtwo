@@ -198,7 +198,7 @@ vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfGhostDetection.so
 vendor/lib64/libmfec.so
 vendor/lib64/libmmcamera_bestats.so
-vendor/lib64/libmmcamera_cac3.so
+vendor/lib64/libmmcamera_cac.so
 vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
