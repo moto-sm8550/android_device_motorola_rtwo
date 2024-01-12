@@ -129,6 +129,13 @@
         <stream_type>PAL_STREAM_ULTRASOUND</stream_type>
         <stream_type>PAL_STREAM_SENSOR_PCM_DATA</stream_type>
     </low_power_vote_streams>
+    <usb_vendor_uuids>
+        <usb_vendor id="0000:0000" /> <!-- Default used when connected USB device is not included in the list below -->
+        <usb_vendor id="17ef:b813" /> <!-- Lenovo ThinkReality A3 Smart Glasses -->
+        <usb_vendor id="18d1:5034" /> <!-- Google USB-C to 3.5mm Adapter -->
+        <usb_vendor id="31b2:0011" /> <!-- JSAUX USB-C to 3.5mm Adapter -->
+        <!-- More USB vendor IDs can be added as needed.  -->
+    </usb_vendor_uuids>
     <group_device_cfg>
         <upd_rx>
             <snd_device name="handset" />
@@ -312,8 +319,8 @@
             <usecase>
                 <name>PAL_STREAM_DEEP_BUFFER</name>
                 <ec_enable>1</ec_enable>
-                <channels>1</channels>
-                <snd_device_name>handset-mic</snd_device_name>
+                <channels>2</channels>
+                <snd_device_name>speaker-stereo-dmic-ef</snd_device_name>
                 <custom-config key="camcorder_algo_3">
                     <channels>3</channels>
                     <snd_device_name>three-mic</snd_device_name>
@@ -524,6 +531,7 @@
             <samplerate>48000</samplerate>
             <ec_enable>0</ec_enable>
             <snd_device_name>usb-headset-mic</snd_device_name>
+            <usb_uuid_based_tuning>1</usb_uuid_based_tuning>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
                 <ec_enable>1</ec_enable>
@@ -991,6 +999,7 @@
             <max_channels>2</max_channels>
             <channels>2</channels>
             <snd_device_name>usb-headphones</snd_device_name>
+            <usb_uuid_based_tuning>1</usb_uuid_based_tuning>
             <fractional_sr>1</fractional_sr>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -1003,6 +1012,7 @@
             <max_channels>2</max_channels>
             <channels>2</channels>
             <snd_device_name>usb-headphones</snd_device_name>
+            <usb_uuid_based_tuning>1</usb_uuid_based_tuning>
             <fractional_sr>1</fractional_sr>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
