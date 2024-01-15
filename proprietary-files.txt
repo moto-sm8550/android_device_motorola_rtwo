@@ -105,7 +105,6 @@ vendor/lib/libopencv3a.so
 vendor/lib/libopestriping.so
 vendor/lib/libos.so
 vendor/lib/libportrait_repair_ppl3_ocl.so
-vendor/lib/libpowercore.so
 vendor/lib/libqll.so
 vendor/lib/libqll10.so
 vendor/lib/libqllengine.so
@@ -119,7 +118,6 @@ vendor/lib/libtfestriping.so
 vendor/lib/libthreadutils.so
 vendor/lib/libubifocus.so
 vendor/lib/libvideoml.so
-vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
 vendor/lib/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -216,7 +214,6 @@ vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
-vendor/lib64/libpowercore.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
@@ -573,15 +570,6 @@ vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 # Dolby vision
 vendor/etc/dolby_vision.cfg
 
-# Ese Powermanagement
-vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
-vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
-vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
-vendor/lib64/libesepmconfig.so
-vendor/lib64/libesesbprovision.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.1.so
-
 # eUICC - from motorola/rtwo_g/msi:13/T1TRS33.43-48-41-3/ac9a4-9767e:user/release-keys
 product/app/EuiccPartnerApp/EuiccPartnerApp.apk|134967f91e11db5da58faff4a0bb862bda2bb1a1
 product/etc/permissions/privapp-permissions-com.google.android.euicc.xml|ef99fe93aa2ed629fef39c3dcc4b07c597c1f469
@@ -655,14 +643,6 @@ vendor/lib64/libsn220u_fw.so
 
 # OEM
 vendor/etc/vhw.xml
-
-# Secure Element
-vendor/bin/hw/vendor.qti.secure_element@1.2-service
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
-vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/jcos_nq_client.so
-vendor/lib64/ls_nq_client.so
-vendor/lib64/se_nq_extn_client.so
 
 # Sensors
 vendor/bin/mot_vsync_psd
