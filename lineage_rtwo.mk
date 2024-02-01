@@ -1,17 +1,7 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2024 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit from those products. Most specific first.
@@ -33,7 +23,7 @@ PRODUCT_MODEL := motorola edge 40 pro
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=rtwo_cn \
-    PRIVATE_BUILD_DESC="rtwo_cn-user 14 U1TR34.8-19-2 9bfa3-adc28 release-keys"
+    TARGET_PRODUCT=rtwo_g \
+    PRIVATE_BUILD_DESC="rtwo_g-user 14 U1TR34.8-30-13 c6cfc-4ed033 release-keys"
 
-BUILD_FINGERPRINT := motorola/rtwo_cn/msi:14/U1TR34.8-19-2/9bfa3-adc28:user/release-keys
+BUILD_FINGERPRINT := motorola/rtwo_g/msi:14/U1TR34.8-30-13/c6cfc-4ed033:user/release-keys

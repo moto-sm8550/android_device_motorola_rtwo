@@ -1,4 +1,6 @@
 # All unpinned blobs below are extracted from the release mentioned in proprietary-files.txt
+
+# CarrierSettings
 product/etc/CarrierSettings/carrier_list.pb
 product/etc/CarrierSettings/others.pb
 product/etc/CarrierSettings/s001001imsi_3d__5e_001001_2e__2a_.pb
@@ -45,9 +47,11 @@ product/etc/CarrierSettings/s20416gid1_3d_ff.pb
 product/etc/CarrierSettings/s20416.pb
 product/etc/CarrierSettings/s20416spn_3d_ben_20_nl.pb
 product/etc/CarrierSettings/s20416spn_3d_ben.pb
+product/etc/CarrierSettings/s20416spn_3d_simpel_20_nl.pb
 product/etc/CarrierSettings/s20416spn_3d_simpel.pb
 product/etc/CarrierSettings/s20416spn_3d_t_2d_mobile_20_nl.pb
 product/etc/CarrierSettings/s20416spn_3d_tele2_20_nl.pb
+product/etc/CarrierSettings/s20417.pb
 product/etc/CarrierSettings/s20433.pb
 product/etc/CarrierSettings/s20465gid1_3d_50.pb
 product/etc/CarrierSettings/s20601gid1_3d_28.pb
@@ -132,6 +136,8 @@ product/etc/CarrierSettings/s20826.pb
 product/etc/CarrierSettings/s20827.pb
 product/etc/CarrierSettings/s20827spn_3d_coriolis.pb
 product/etc/CarrierSettings/s20835.pb
+product/etc/CarrierSettings/s20838.pb
+product/etc/CarrierSettings/s20838spn_3d_lebara.pb
 product/etc/CarrierSettings/s20888.pb
 product/etc/CarrierSettings/s21401.pb
 product/etc/CarrierSettings/s21402.pb
@@ -149,6 +155,7 @@ product/etc/CarrierSettings/s21403spn_3d_racc.pb
 product/etc/CarrierSettings/s21403spn_3d_simyo.pb
 product/etc/CarrierSettings/s21403spn_3d_virgin_20_telco.pb
 product/etc/CarrierSettings/s21404imsi_3d_2140423.pb
+product/etc/CarrierSettings/s21404imsi_3d_2140426.pb
 product/etc/CarrierSettings/s21404.pb
 product/etc/CarrierSettings/s21404spn_3d_cablemovil.pb
 product/etc/CarrierSettings/s21404spn_3d_guuk.pb
@@ -516,6 +523,7 @@ product/etc/CarrierSettings/s24681.pb
 product/etc/CarrierSettings/s24701.pb
 product/etc/CarrierSettings/s24702.pb
 product/etc/CarrierSettings/s24705.pb
+product/etc/CarrierSettings/s24710.pb
 product/etc/CarrierSettings/s24801imsi_3d_248010x2.pb
 product/etc/CarrierSettings/s24801imsi_3d_248010x3.pb
 product/etc/CarrierSettings/s24801.pb
@@ -797,6 +805,7 @@ product/etc/CarrierSettings/s302220gid1_3d_6836.pb
 product/etc/CarrierSettings/s302220gid1_3d_6838.pb
 product/etc/CarrierSettings/s302220gid1_3d_7330.pb
 product/etc/CarrierSettings/s302220gid1_3d_7530.pb
+product/etc/CarrierSettings/s302220spn_3d_wom.pb
 product/etc/CarrierSettings/s302221gid1_3d_4b4f.pb
 product/etc/CarrierSettings/s302221gid1_3d_4d4f.pb
 product/etc/CarrierSettings/s302221gid1_3d_5043.pb
@@ -3071,16 +3080,17 @@ product/etc/CarrierSettings/s90137.pb
 product/etc/CarrierSettings/s90143.pb
 product/etc/CarrierSettings/s90158.pb
 
-# CarrierSettings - from motorola/rtwo_g/msi:13/T1TRS33.43-48-41-3/ac9a4-9767e:user/release-keys
-product/etc/CarrierSettings/s20404spn_3d_c_20_spire_20_.pb|7b074d1dc0800baef0f5f24acc8bc467db59cb99
-product/etc/CarrierSettings/s21403spn_3d_orange.pb|127c822d108765530395fdb0d17f64171d9302e8
-product/etc/CarrierSettings/s21404imsi_3d_2140426xxxxxxxx.pb|fc605689d3ac6a7336ba849674c19bb1b84a0815
-product/etc/CarrierSettings/s24006spn_3d_vimla.pb|582c3069166a80d825e87b1b2e7cb25cac6b80ce
-product/etc/CarrierSettings/s26207imsi_3d_2620739xxxxxxxx.pb|5638e57f90a034519caaae7b666ea442014f20de
-product/etc/CarrierSettings/s26207imsi_3d_2620749xxxxxxxx.pb|f9e0a3dda8c7efffd332595e701873e4948b594e
-product/etc/CarrierSettings/s302220spn_3d_wom_20_roaming_20_int.pb|7c8aca3e311d3abf43023b5b1a29556282e47181
-product/etc/CarrierSettings/s310410gid1_3d_3436_20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20_.pb|1dd84de5a216be1f986531f02735ecec2498bf65
-product/etc/CarrierSettings/s310410gid1_3d_3442_20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20_.pb|40814e6149193ac64d89813cac8105ec62c7d31f
-product/etc/CarrierSettings/s310410gid1_3d_3448_20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20__20_.pb|d91cd40c1772c4a9f6dbfdc306912f4f4a1b71a6
-product/etc/CarrierSettings/s311480gid1_3d_b100000000000000.pb|c4610adf0b06dc6306afa9a07922c9a747decd9a
-product/etc/CarrierSettings/s53005imsi_3d_53005204.pb|4babfed96141650aa1fad582bc2c514204bca719
+# CarrierSettings - from motorola/rtwo_cn/rtwo:14/U1TR34.8-19-11/a7b98-bf32f9:user/release-keys - RETCN variant
+product/etc/CarrierSettings/s46000.pb|d4598c87240639b825593499e0087570ba3cec83
+product/etc/CarrierSettings/s46001.pb|2453d0eed8fe75d88fe016b8f4014177be832cdb
+product/etc/CarrierSettings/s46002.pb|7d0716c4cd99556e4b98cfd0e1baa51e46986a61
+product/etc/CarrierSettings/s46003.pb|bb7a77214a3dd73165535822ccf353613cb7cdde
+product/etc/CarrierSettings/s46004.pb|ea909f134e9b1e099ce83cd79810d7a8dbca8ac6
+product/etc/CarrierSettings/s46006.pb|cf0b9ff32827557a0d92a32697552b587f490248
+product/etc/CarrierSettings/s46007.pb|53a9bc90e0261b98aa01782290661349db1bce58
+product/etc/CarrierSettings/s46008.pb|8ca963d8b4ea79d6e85ba40050e89fdb6685677c
+product/etc/CarrierSettings/s46009.pb|b43d8b14a5f978f6072f0f324bf8230f32e06aac
+product/etc/CarrierSettings/s46011.pb|e4efaa6b278486cf659677b6844bf466fea79c9c
+product/etc/CarrierSettings/s46012.pb|b54fad0e0f32ab4e7fc417360d773d445db04d6b
+product/etc/CarrierSettings/s46013.pb|5a19bda57268a8e0f549535998733657c211a866
+product/etc/CarrierSettings/s46015.pb|1b26cf530f272c49c0b0256d8200dc156fe30017
