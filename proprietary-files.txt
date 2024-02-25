@@ -571,9 +571,9 @@ vendor/etc/display/qdcm_calib_data_mipi_mot_video_dummy_qhd.json
 vendor/etc/dolby_vision.cfg
 
 # eUICC
-product/app/EuiccPartnerApp/EuiccPartnerApp.apk
+product/app/EuiccPartnerApp/EuiccPartnerApp.apk;PRESIGNED
 product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
-product/priv-app/EuiccGoogle/EuiccGoogle.apk
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
