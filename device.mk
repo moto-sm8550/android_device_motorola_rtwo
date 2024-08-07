@@ -53,7 +53,7 @@ $(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.rtwo
+    android.hardware.biometrics.fingerprint@2.3-service.moto_sm8550_fod
 
 # Init
 PRODUCT_PACKAGES += \
