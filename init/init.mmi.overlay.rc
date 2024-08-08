@@ -7,12 +7,6 @@ on fs
 on post-fs
     start vendor.copy_qc_cert
 
-    # Sensors
-    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_enabled
-    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/double_tap_pressed
-    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/udfps_enabled
-    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/touchscreen/primary/udfps_pressed
-
 on early-boot
     chown system system /dev/goodix_fp
     chmod 0664 /dev/goodix_fp
