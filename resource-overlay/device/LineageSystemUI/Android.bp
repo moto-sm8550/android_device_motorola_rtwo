@@ -4,6 +4,6 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageSystemUIRtwo",
+    name: "LineageSystemUIDevice",
     product_specific: true,
 }
