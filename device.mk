@@ -27,12 +27,12 @@ $(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureResRtwo \
-    FrameworksResRtwo \
-    LineageSystemUIRtwo \
-    ProductFrameworksResRtwo \
-    SettingsResRtwo \
-    SystemUIResRtwo
+    ApertureResDevice \
+    FrameworksResDevice \
+    LineageSystemUIDevice \
+    ProductFrameworksResDevice \
+    SettingsResDevice \
+    SystemUIResDevice
 
 # Audio
 PRODUCT_COPY_FILES += \
