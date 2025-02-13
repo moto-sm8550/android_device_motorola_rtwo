@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2022-2024 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2022-2025 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -23,6 +22,6 @@ PRODUCT_MODEL := motorola edge 40 pro
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="rtwo_g-user 14 U1TRS34.8-30-13-2-2-4 68e97-f9a887 release-keys" \
-    BuildFingerprint=motorola/rtwo_g/rtwo:14/U1TRS34.8-30-13-2-2-4/68e97-f9a887:user/release-keys \
+    BuildDesc="rtwo_g-user 14 U1TRS34.8-30-13-2-2-5 15d9e-a5b839 release-keys" \
+    BuildFingerprint=motorola/rtwo_g/rtwo:14/U1TRS34.8-30-13-2-2-5/15d9e-a5b839:user/release-keys \
     DeviceProduct=rtwo_g
