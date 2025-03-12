@@ -4,5 +4,8 @@
 //
 
 soong_namespace {
-    imports: ["device/motorola/sm8550-common"],
+    imports: [
+        "device/motorola/sm8550-common",
+        "hardware/motorola",
+    ],
 }
