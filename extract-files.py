@@ -35,8 +35,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'product/priv-app/MotCamera4/MotCamera4.apk': blob_fixup()
-        .apktool_patch('MotCamera4-patches'),
     'vendor/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
     .add_needed('libbase_shim.so'),
 }  # fmt: skip

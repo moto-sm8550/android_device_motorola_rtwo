@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from edge 40 pro (14 U1TRS34.8-30-13-2-2-5 15d9e-a5b839).
+## are from edge 40 pro (15 V1TR35H.60-33 d7ecee-e847d6).
 ## RETAIL variant
 
 # ACDB Data

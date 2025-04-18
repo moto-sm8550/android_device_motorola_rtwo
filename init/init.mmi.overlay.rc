@@ -140,7 +140,6 @@ on property:ro.carrier=tmo
     setprop persist.vendor.audio.use_case.extend tmo
 
 #enable ftrace when boot complete
-# MMI_STOPSHIP <debug abnormal QC sensor>: capture sensor ftrace
 on property:dev.bootcomplete=1 && property:ro.vendor.build.type=userdebug
     write /sys/kernel/tracing/tracing_on 0
     write /sys/kernel/tracing/buffer_size_kb 65534
@@ -159,11 +158,6 @@ on property:dev.bootcomplete=1 && property:ro.vendor.build.type=userdebug
     write /sys/kernel/tracing/events/arm_smmu/map_pages/enable 1
     write /sys/kernel/tracing/events/arm_smmu/map_sg/enable 1
     write /sys/kernel/tracing/events/arm_smmu/unmap_pages/enable 1
-    write /sys/kernel/tracing/set_event "workqueue:workqueue_execute_end workqueue:workqueue_execute_start"
-    write /sys/kernel/tracing/set_event "workqueue:workqueue_activate_work workqueue:workqueue_queue_work"
-    write /sys/kernel/tracing/set_event "sched:sched_switch sched:sched_wakeup sched:sched_stat_blocked"
-    write /sys/kernel/tracing/set_event "sched:sched_process_wait sched:sched_load_balance"
-    write /sys/kernel/tracing/set_event "sched:* irq:*"
     write /sys/kernel/tracing/tracing_on 1
 
 on property:vendor.bluetooth.sar_state=connect
