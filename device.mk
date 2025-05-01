@@ -77,6 +77,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
+# Properties
+PRODUCT_PACKAGES += \
+    hardware.sku.XT2301-1.prop \
+    hardware.sku.XT2301-5.prop
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-rtwo-game-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rtwo.conf

@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "hardware.sku.XT2301-1.prop",
+    src: "hardware.sku.XT2301-1.prop",
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "hardware.sku.XT2301-5.prop",
+    src: "hardware.sku.XT2301-5.prop",
+    product_specific: true,
+}

@@ -4,3 +4,6 @@ masterclear.allow_retain_esim_profiles_after_fdr=true
 
 # Radio
 ro.vendor.radio.imei.sv=25
+
+# SKU specific properties
+import /product/etc/hardware.sku.${ro.boot.hardware.sku}.prop
