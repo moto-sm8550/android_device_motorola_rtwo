@@ -95,5 +95,12 @@ $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/power_supp
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# VINTF
+ODM_MANIFEST_SKUS += dn dne
+ODM_MANIFEST_DN_FILES := \
+    $(DEVICE_PATH)/manifest_dn.xml
+ODM_MANIFEST_DNE_FILES := \
+    $(DEVICE_PATH)/manifest_dne.xml
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/rtwo/rtwo-vendor.mk)

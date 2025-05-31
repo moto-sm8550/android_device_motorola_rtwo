@@ -14,11 +14,6 @@ TARGET_BOOTLOADER_BOARD_NAME := rtwo
 # Display
 TARGET_SCREEN_DENSITY := 400
 
-# HIDL
-ODM_MANIFEST_SKUS += dn dne
-ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/manifest_dn.xml
-ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_dne.xml
-
 # Kernel
 TARGET_KERNEL_CONFIG += \
 	vendor/ext_config/moto-kalama-rtwo.config
