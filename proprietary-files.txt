@@ -320,6 +320,9 @@ vendor/lib64/camera/com.qti.tuned.mot_rtwo_ov50a.bin
 vendor/lib64/camera/com.qti.tuned.mot_rtwo_ov60a.bin
 vendor/lib64/camera/com.qti.tuned.mot_rtwo_s5kjn1.bin
 
+# CapSense
+vendor/bin/capsense_reset
+
 # Charger firmware
 vendor/firmware/cps4038.bin
 
