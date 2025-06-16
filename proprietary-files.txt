@@ -1,6 +1,6 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from edge 40 pro (15 V1TR35H.60-33 d7ecee-e847d6).
-## RETAIL variant
+## are from edge 40 pro (15 V1TRS35H.60-33-5 7195d7-c0632).
+## variant: RETAIL
 
 # ACDB Data
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -273,16 +273,16 @@ vendor/etc/jiigan/jiigan_model.data
 vendor/etc/tetras/portrait_repair_composite.model
 
 # Camera - imgtuner
+system/lib64/motorola.hardware.camera.imgtuner.aidl-V1-ndk.so
+system_ext/etc/enable-disable-packages/enable-disable-com.motorola.imagertuning_u.xml
 system_ext/etc/permissions/com.motorola.imagertuning.v.rtwo.xml
 system_ext/etc/permissions/com.motorola.imagertuning.v.xml
 system_ext/etc/permissions/com.motorola.libimgTuner.xml
 system_ext/etc/permissions/privapp-permissions-com.motorola.imagertuning.v.xml
-system_ext/etc/enable-disable-packages/enable-disable-com.motorola.imagertuning_u.xml
 system_ext/etc/public.libraries-motoimagetuner.txt
 system_ext/framework/com.motorola.libimgTuner.jar
 system_ext/lib64/libimgTuner_jni.motoimagetuner.so
 system_ext/priv-app/ImagerTuning-V/ImagerTuning-V.apk;PRESIGNED
-system/lib64/motorola.hardware.camera.imgtuner.aidl-V1-ndk.so
 vendor/bin/hw/motorola.hardware.camera.imgtuner.aidl-service
 vendor/etc/init/motorola.hardware.camera.imgtuner.aidl-service.rc
 vendor/etc/vintf/manifest/motorola.hardware.camera.imgtuner.aidl.xml
