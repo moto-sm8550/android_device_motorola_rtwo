@@ -22,6 +22,6 @@ PRODUCT_MODEL := motorola edge 40 pro
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="rtwo_g-user 15 V1TRS35H.60-33-5 7195d7-c0632 release-keys" \
-    BuildFingerprint=motorola/rtwo_g/rtwo:15/V1TRS35H.60-33-5/7195d7-c0632:user/release-keys \
+    BuildDesc="rtwo_g-user 15 V1TRS35H.60-33-7 2590e-1eb53d release-keys" \
+    BuildFingerprint=motorola/rtwo_g/rtwo:15/V1TRS35H.60-33-7/2590e-1eb53d:user/release-keys \
     DeviceProduct=rtwo_g
