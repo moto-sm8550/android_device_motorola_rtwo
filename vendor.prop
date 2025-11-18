@@ -1,4 +1,5 @@
 # Audio
+vendor.audio.hac_on=false
 vendor.audio.max.dr=7.2,7.0
 vendor.audio.max.temp=60.0
 vendor.audio.min.dr=5.8,5.6
