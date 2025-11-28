@@ -2,6 +2,7 @@
 
 abl.elf:abl.img;AB
 aop.mbn:aop.img;AB
+aop_devcfg.mbn:aop_config.img;AB
 BTFM.bin:bluetooth.img;AB
 cpucp.elf:cpucp.img;AB
 devcfg.mbn:devcfg.img;AB
@@ -16,6 +17,8 @@ qupfw.elf:qupfw.img;AB
 shrm.elf:shrm.img;AB
 storsec.mbn:storsec.img;AB
 tz.mbn:tz.img;AB
+uefi.elf:uefi.img;AB
 uefi_sec.mbn:uefisecapp.img;AB
 xbl_s.melf:xbl.img;AB
 xbl_config.elf:xbl_config.img;AB
+XblRamdump.elf:xbl_ramdump.img;AB
