@@ -1,0 +1,9 @@
+{
+    "device": null,
+    "devices": null,
+    "has_device_suffix": false,
+    "original_device": null,
+    "original_name": "LineageSystemUI",
+    "original_package": "com.android.systemui.device.lineage",
+    "original_target_package": "com.android.systemui"
+}

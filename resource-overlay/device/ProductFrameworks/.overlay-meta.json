@@ -1,0 +1,9 @@
+{
+    "device": null,
+    "devices": null,
+    "has_device_suffix": false,
+    "original_device": null,
+    "original_name": "ProductFrameworks",
+    "original_package": "android.overlay.product.device",
+    "original_target_package": "android"
+}

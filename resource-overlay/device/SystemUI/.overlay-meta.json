@@ -1,0 +1,9 @@
+{
+    "device": null,
+    "devices": null,
+    "has_device_suffix": false,
+    "original_device": null,
+    "original_name": "SystemUI",
+    "original_package": "com.android.systemui.overlay.device",
+    "original_target_package": "com.android.systemui"
+}

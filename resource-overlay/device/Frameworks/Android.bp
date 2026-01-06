@@ -5,5 +5,5 @@
 
 runtime_resource_overlay {
     name: "FrameworksResDevice",
-    vendor: true
+    vendor: true,
 }
