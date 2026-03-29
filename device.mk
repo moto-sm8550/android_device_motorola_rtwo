@@ -96,11 +96,19 @@ $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/power_supp
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # VINTF
-ODM_MANIFEST_SKUS += dn dne
+ODM_MANIFEST_SKUS += dn dne dnp n np
 ODM_MANIFEST_DN_FILES := \
     $(LOCAL_PATH)/vintf/manifest_dn.xml
 ODM_MANIFEST_DNE_FILES := \
     $(LOCAL_PATH)/vintf/manifest_dne.xml
+ODM_MANIFEST_DNP_FILES := \
+    $(LOCAL_PATH)/vintf/manifest_dnp.xml
+ODM_MANIFEST_N_FILES := \
+    $(LOCAL_PATH)/vintf/manifest_n.xml \
+    device/motorola/sm8550-common/vintf/manifest_ss.xml
+ODM_MANIFEST_NP_FILES := \
+    $(LOCAL_PATH)/vintf/manifest_np.xml \
+    device/motorola/sm8550-common/vintf/manifest_ss.xml
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/rtwo/rtwo-vendor.mk)
