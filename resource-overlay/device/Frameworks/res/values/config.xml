@@ -255,12 +255,14 @@
          the brightness value is negative, only the lux threshold is applied. -->
     <!-- Low zone brightness thresholds in the range [0, 255] -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>50</item>
+        <item>68</item>
+        <item>82</item>
     </integer-array>
 
     <!-- Low zone lux thresholds -->
     <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
         <item>-1</item>
+        <item>70</item>
     </integer-array>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
