@@ -97,9 +97,6 @@ on property:vendor.wifi.tethering=false
 on property:vendor.wifi.tethering=true
     write /sys/module/kiwi_v2/parameters/sar_mhs enabled
 
-on property:ro.product.is_prc=true
-    setprop persist.vendor.audio.use_case.extend prc
-
 on property:ro.carrier=tmo
     setprop persist.vendor.audio.use_case.extend tmo
 
