@@ -193,8 +193,8 @@
     <ctl name="TX3 MODE" value="ADC_HIFI" />
 
     <!-- Volume controls -->
-    <ctl name="WSA_RX0 Digital Volume" value="0" />
-    <ctl name="WSA_RX1 Digital Volume" value="0" />
+    <ctl name="WSA_RX0 Digital Volume" value="87" />
+    <ctl name="WSA_RX1 Digital Volume" value="87" />
     <ctl name="RX_RX0 Digital Volume" value="87" />
     <ctl name="RX_RX1 Digital Volume" value="87" />
     <ctl name="RX_RX2 Digital Volume" value="87" />
