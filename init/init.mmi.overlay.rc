@@ -14,6 +14,7 @@ on early-boot
     mkdir /data/vendor/wlc 0775 vendor_tcmd system
     chown system system /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
     chmod 0664 /mnt/vendor/persist/sensors/als_comp_multi_cal_raw
+    write /sys/kernel/mm/lru_gen/enabled Y
 
 on boot
     # allow TCMD to access cci
