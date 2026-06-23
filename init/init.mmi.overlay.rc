@@ -65,12 +65,19 @@ on boot
     chmod 0660 /sys/class/power_supply/wireless/device/wlc_light_ctl
     chmod 0660 /sys/class/power_supply/wireless/device/wlc_fan_speed
 
+service vendor.capsense_reset /vendor/bin/capsense_reset
+   class core
+   user system
+   group system input
+   disabled
+
 service vendor.mmi-cap-sh /vendor/bin/init.mmi.cap.sh
     class core
     user root
     oneshot
 
 on property:sys.boot_completed=1
+    start vendor.capsense_reset
     #change adsp pmic test command file access permission
     chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/tcmd
     chown vendor_tcmd system /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/force_pmic_icl
