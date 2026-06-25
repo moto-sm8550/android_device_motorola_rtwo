@@ -47,6 +47,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libgf_hal.so': blob_fixup()
         .replace_needed('vendor.goodix.hardware.biometrics.fingerprint@2.1_vendor.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
+    'vendor/lib64/libmot_chi_desktop_helper.so': blob_fixup()
+        .add_needed('libgui_buffer_shim_vendor.so'),
     'vendor/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
     .add_needed('libbase_shim.so'),
     (
