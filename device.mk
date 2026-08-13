@@ -26,7 +26,6 @@ $(call inherit-product, device/motorola/sm8550-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureResDevice \
     FrameworksResDevice \
     LineageSystemUIDevice \
     ProductFrameworksResDevice \
