@@ -133,7 +133,6 @@ vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
 vendor/lib64/libopestriping.so
-vendor/lib64/libos.so
 vendor/lib64/libportrait_repair_ppl3_ocl.so
 vendor/lib64/libqll.so
 vendor/lib64/libqll10.so
@@ -146,9 +145,7 @@ vendor/lib64/librmsclib1.so
 vendor/lib64/libsfeShiftExtrapolation.so
 vendor/lib64/libsnpe_loader.so
 vendor/lib64/libswregistrationalgo.so
-vendor/lib64/libsynx.so
 vendor/lib64/libtfestriping.so
-vendor/lib64/libthreadutils.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libubifocus.so
