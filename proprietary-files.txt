@@ -1,6 +1,6 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from edge 40 pro (16 W1TR36H.56-13 020cda-6262a5).
-## variant: RETAIL
+## are from edge 40 pro (16 W1TRS36H.56-13-1-3 / 16 TTR3S3HV-W1-ST34 cb3b97-65907).
+## variant: RETEU
 
 # ACDB Data
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
