@@ -4,6 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import subprocess
+from os import path
+
+from extract_utils.args import (
+    parse_args,
+)
 from extract_utils.extract import extract_fns_user_type
 from extract_utils.extract_star import extract_star_firmware
 from extract_utils.fixups_blob import (
@@ -17,6 +23,9 @@ from extract_utils.fixups_lib import (
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
+)
+from extract_utils.tools import (
+    lineage_scripts_dir,
 )
 
 namespace_imports = [
@@ -67,3 +76,10 @@ if __name__ == '__main__':
         module, 'sm8550-common', module.vendor
     )
     utils.run()
+
+    args = parse_args()
+    if args.source and args.source != 'adb':
+        source = args.source[0] if isinstance(args.source, list) else args.source
+        info_script = path.join(lineage_scripts_dir, 'motorola', 'info.sh')
+        if path.isfile(info_script):
+            subprocess.run([info_script, source])
