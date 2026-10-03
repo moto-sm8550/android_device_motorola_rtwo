@@ -37,8 +37,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">500</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">500</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
@@ -68,9 +68,9 @@
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
         <item>2</item>
-        <item>4</item>
         <item>5</item>
         <item>10</item>
+        <item>20</item>
         <item>40</item>
         <item>100</item>
         <item>325</item>
@@ -95,20 +95,20 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>3</item>
-        <item>7</item>
-        <item>10</item>
-        <item>12</item>
-        <item>24</item>
-        <item>82</item>
-        <item>96</item>
-        <item>130</item>
-        <item>192</item>
-        <item>325</item>
-        <item>500</item>
-        <item>700</item>
-        <item>800</item>
-        <item>1000</item>
+        <item>2</item>     <!-- 0 to 2 lux   : Minimum dark room brightness -->
+        <item>3</item>     <!-- 2 to 5 lux   : Mild rise -->
+        <item>4</item>     <!-- 5 to 10 lux  : Dampens white screen reflection spikes -->
+        <item>6</item>     <!-- 10 to 20 lux : Caps feedback loop in pitch black rooms -->
+        <item>12</item>    <!-- 20 to 40 lux : Transitions into dim indoor lighting -->
+        <item>40</item>    <!-- 40 to 100 lux -->
+        <item>82</item>    <!-- 100 to 325 lux -->
+        <item>130</item>   <!-- 325 to 1250 lux -->
+        <item>192</item>   <!-- 1250 to 3500 lux -->
+        <item>325</item>   <!-- 3500 to 5500 lux -->
+        <item>500</item>   <!-- 5500 to 10000 lux -->
+        <item>700</item>   <!-- 10000 to 50000 lux -->
+        <item>800</item>   <!-- 50000 to 100000 lux -->
+        <item>1000</item>  <!-- 100000+ lux -->
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
