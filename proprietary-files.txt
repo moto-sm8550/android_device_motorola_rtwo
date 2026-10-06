@@ -128,7 +128,6 @@ vendor/lib64/libmot_chi_desktop_helper.so
 vendor/lib64/libmot_engine_settings.so
 vendor/lib64/libmotcameramodulemonitor.so
 vendor/lib64/libmotoisdataqueue.so
-vendor/lib64/libmpbase.so
 vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
